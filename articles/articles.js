@@ -195,6 +195,8 @@ function display(data=[]){
   img_div.id=("img_div")
   const text_div=document.createElement("div");
   text_div.id=("text_div")
+//   const bottom_div=document.createElement("div");
+//   ext_div.id=("text_div")
 
   const image=document.createElement("img");
   image.src=element.image;
@@ -213,6 +215,7 @@ function display(data=[]){
   date.textContent = element.date;
 
   const view=document.createElement("button");
+  view.id=("view_text")
   view.textContent=element.view;
   view.addEventListener("click",function(View_your){
    View_your=image.innerHTML
