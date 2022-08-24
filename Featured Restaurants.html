@@ -1,0 +1,191 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="directory.css">
+    <style>
+
+
+        #nav-1 {
+            width: 88%;
+            margin: auto;
+            display: flex;
+            /* border: 1px solid red; */
+        }
+        
+        #nav1-child-1 {
+            margin-left: 50px;
+        }
+        
+        #nav1-child-2 {
+            width: 16%;
+            height: 60px;
+            margin-left: 12%;
+            margin-top: 10px;
+        
+        }
+        
+        #nav1-child-2 img {
+            width: 20%;
+            margin-left: 12px;
+            margin-top: 7%;
+        
+        }
+        
+        #nav1-child-3 {
+            display: flex;
+            gap: 10px;
+            margin-left: 9%;
+            align-items: center;
+        }
+        
+        #nav1-child-3 p {
+            font-size: 12px;
+        }
+        
+        #nav1-child-3 h4,
+        a {
+            font-size: 14px;
+            text-decoration: none;
+            color: white;
+        }
+        
+        #facebook {
+            width: 80px;
+            height: 20px;
+            line-height: 20px;
+            padding: 0px 2px 2px 2px;
+            background-color: #35619f;
+            font-weight: bold;
+            font-size: 13px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        
+        #email {
+            width: 80px;
+            height: 20px;
+            line-height: 20px;
+            padding: 0px 2px 2px 2px;
+            background-color: #666666;
+            font-weight: bold;
+            font-size: 13px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        
+        #nav-2 {
+            background-color: #2bb673;
+            height: auto;
+            width: 100%;
+        
+        }
+        
+        #nav-2>div {
+            width: 74%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        
+        
+        
+        }
+        
+        #nav-2>div a {
+            font-size: 18px;
+            line-height: 40px;
+        
+        }
+        
+        #signup {
+            border-left: 1px solid rgb(198, 196, 196);
+            padding: 5px;
+        }
+        
+        #footer {
+                background-color: #2bb673;
+                height: auto;
+                width: 100%;
+                padding: 30px;
+            }
+        
+            #footer>div:nth-child(1) {
+        
+                width: 75%;
+                height: auto;
+                margin: auto;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+            }
+        
+        
+        
+            #footer>div>div>a {
+                text-decoration: none;
+                display: block;
+                line-height: 1.5;
+                font-weight: normal;
+                color: #eeeeee;
+                font-size: 13px;
+            }
+        
+            .fot-head {
+                font-size: 16px;
+                color: white;
+                font-weight: bolder;
+                margin-bottom: 10px;
+        
+            }
+        
+            #fot-para {
+                margin: auto;
+                width: 100%;
+                margin-top: 20px;
+        
+            }
+        
+            #fot-para>p {
+                text-align: center;
+                color: #eeeeee;
+                font-size: 10px;
+                background-color: #2bb673;
+                line-height: 1.5;
+            }
+            </style>
+</head>
+<body>
+    <div id="navbar">
+    </div>
+    <div id="Dir_top">
+        <h2>Featured Restaurants In Malaysia</h2>
+        <h5 style="line-height:15px;">Want to know more about the featured restaurants and cafes? Hop in to their KindMeal shops to check out their meat-free deals and delicious food.</h5>
+        <h5 style="line-height:15px;margin-bottom: -10px;"> Some restaurants listed may not have active deals, but they all certainly offer tasty meat-free food that you can try right away!</h5>
+    </div>
+    <div id="filt">
+        <button id="tab1">Vegetarian Directory</button>
+        <button id="tab2" style="background-color: #04be5a;color: white;">Featured Restaurants</button>
+        <button id="tab3">Food Menu</button>
+        <button id="tab4">Food Map</button>
+    </div>
+    <div id="buttonss">Page:</div>
+    <div id="cont1">
+    </div>
+    <div id="buttonss1">Page:</div>
+    <div id="footer">
+
+    </div>
+</body>
+</html>
+<script type="module">
+    let navbar = document.getElementById('navbar')
+    import DishplayNavbar from './components/navbar.js'
+    navbar.innerHTML = DishplayNavbar()
+
+    let footer = document.getElementById('footer')
+    import dishplayFooter from './components/footer.js'
+    footer.innerHTML = dishplayFooter()
+</script>
+<script src="Featured Restaurants.js"></script>
