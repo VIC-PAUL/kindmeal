@@ -28,7 +28,7 @@ function DishplayNavbar() {
         <a href="#">Meal Deals</a>
         <a href="#">KindMoments</a>
         <a href="#">Hot Picks</a>
-        <a href="#">Directory</a>
+        <a href="directory.html">Directory</a>
         <a href="#">Articles</a>
         <a href="#">Help</a>
     </div>
