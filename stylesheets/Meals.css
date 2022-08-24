@@ -1,0 +1,75 @@
+
+        body{
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        #topsection{
+            background-color: rgba(238, 238, 235, 0.724);
+            padding: 30px;
+        }
+        #topsection>div{
+            width: 70%;
+            margin: auto;
+        }
+        #topheading{
+            display: flex;
+            align-items: center;
+            height: 35px;
+        }
+        #topheading>h5{
+            font-size: xx-large;
+            color:rgb(80, 78, 78)
+        }
+        #topheading>p{
+            margin-left: 30px;
+            border-left: 3px solid rgba(81, 81, 79, 0.801);
+            padding-left: 30px;
+            font-size: 28px;
+            color: rgba(81, 81, 79, 0.801);
+        }
+        input,select,button{
+            border: none;
+            padding: 10px 15px;
+            font-size: 17px;
+            border-radius: 5px;
+        }
+        #input{
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        button{
+            background-color: rgb(232, 6, 40);
+            color: white;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+
+        #middlesection{
+            width: 70%;
+            margin: 50px auto;
+        }
+
+
+        #container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin-top: 30px;
+            gap: 25px;
+            text-align: center;
+            font-size: x-large;
+        }
+        #container>div{
+            padding: 15px;
+            box-shadow: 4px 4px 10px rgb(202, 196, 196);
+        }
+        #container img{
+            width: 100%;
+            height: 400px;
+        }
+        #buttons{
+            margin: 30px 0px;
+        }
+        #buttons>button{
+            margin-right: 10px;
+        }
