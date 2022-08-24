@@ -1,0 +1,36 @@
+
+#heading{
+    color: #444444;
+}
+
+
+#main_div  {
+    display: flex;
+    margin: 20px 0px 20px 0px;
+    border-radius: 10px 0px 0px 10px ;
+    height: 300px;
+    
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+#text_div{
+    margin-left: 10px;
+   
+   
+   
+}
+/* #img_div{
+    width: 100%;
+} */
+img{
+    width: 500px;
+    height: 300px;
+    border-radius: 10px 0px 0px 10px ;
+    
+}
+button{
+    background-color: red;
+    border: none;
+    height: 40px;
+    border-radius: 10px;
+    width: 170px;
+}
