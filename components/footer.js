@@ -7,12 +7,12 @@ function dishplayFooter() {
         <a href="#">Businesses / Restaurateurs</a>
         <a href="#">Advertising</a>
         <a href="#">About KindMeal.my</a>
-        <a href="#">Help & FAQ</a>
+        <a href="help.html">Help & FAQ</a>
         <a href="#">Terms & Conditions</a>
         <a href="#">Inspiring Partners</a>
         <a href="#">Lifestyle Ambassadors</a>
         <a href="#">Jobs & Careers</a>
-        <a href="#">Contact Us</a>
+        <a href="contactUs.html">Contact Us</a>
     </div>
     <div>
         <div class="fot-head">Features</div>
@@ -31,9 +31,9 @@ function dishplayFooter() {
     <div>
         <div class="fot-head">Social Media</div>
         <a href="#">KindMeal Widget</a>
-        <a href="#">Facebook</a>
-        <a href="#">Twitter</a>
-        <a href="#">Instagram</a>
+        <a href="https://www.facebook.com/KindMeal.my">Facebook</a>
+        <a href="https://twitter.com/KindMeal">Twitter</a>
+        <a href="https://www.instagram.com/KindMeal.my/">Instagram</a>
     </div>
     <div>
         <div class="fot-head">Mobile</div>
