@@ -19,7 +19,7 @@ function DishplayNavbar() {
                 href="https://www.facebook.com/v2.9/dialog/oauth?client_id=292733157519852&redirect_uri=https%3A%2F%2Fwww.kindmeal.my%2Flogin.php%3Faction%3Dfacebook&state=de4724f7b2529a9874245150d1ee3df9&display=popup&scope=email,user_birthday,user_location">Facebook</a>
         </h4>
         <h4 id="email">Email</h4>
-        <p id="signup">Sign Up</p>
+        <p  id="signup">Sign Up</p>
     </div>
 </div>
 <div id="nav-2">
