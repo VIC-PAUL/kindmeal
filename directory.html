@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="directory.css">
+    <style>
+
+
+#nav-1 {
+    width: 88%;
+    margin: auto;
+    display: flex;
+    /* border: 1px solid red; */
+}
+
+#nav1-child-1 {
+    margin-left: 50px;
+}
+
+#nav1-child-2 {
+    width: 16%;
+    height: 60px;
+    margin-left: 12%;
+    margin-top: 10px;
+
+}
+
+#nav1-child-2 img {
+    width: 20%;
+    margin-left: 12px;
+    margin-top: 7%;
+
+}
+
+#nav1-child-3 {
+    display: flex;
+    gap: 10px;
+    margin-left: 9%;
+    align-items: center;
+}
+
+#nav1-child-3 p {
+    font-size: 12px;
+}
+
+#nav1-child-3 h4,
+a {
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+}
+
+#facebook {
+    width: 80px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0px 2px 2px 2px;
+    background-color: #35619f;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#email {
+    width: 80px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0px 2px 2px 2px;
+    background-color: #666666;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#nav-2 {
+    background-color: #2bb673;
+    height: auto;
+    width: 100%;
+
+}
+
+#nav-2>div {
+    width: 74%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+
+
+}
+
+#nav-2>div a {
+    font-size: 18px;
+    line-height: 40px;
+
+}
+
+#signup {
+    border-left: 1px solid rgb(198, 196, 196);
+    padding: 5px;
+}
+
+#footer {
+        background-color: #2bb673;
+        height: auto;
+        width: 100%;
+        padding: 30px;
+    }
+
+    #footer>div:nth-child(1) {
+
+        width: 75%;
+        height: auto;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+
+
+    #footer>div>div>a {
+        text-decoration: none;
+        display: block;
+        line-height: 1.5;
+        font-weight: normal;
+        color: #eeeeee;
+        font-size: 13px;
+    }
+
+    .fot-head {
+        font-size: 16px;
+        color: white;
+        font-weight: bolder;
+        margin-bottom: 10px;
+
+    }
+
+    #fot-para {
+        margin: auto;
+        width: 100%;
+        margin-top: 20px;
+
+    }
+
+    #fot-para>p {
+        text-align: center;
+        color: #eeeeee;
+        font-size: 10px;
+        background-color: #2bb673;
+        line-height: 1.5;
+    }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+    </div>
+    <div id="Dir_top">
+        <h2>Vegetarian Restaurants In Malaysia</h2>
+        <h5>Looking for even more delicious choices? Explore hundreds of vegetarian and vegan restaurants in Malaysia.</h5>
+        <h5> Are you a restaurant or cafe owner? Boost your business with an attractive KindMeal profile and deals for FREE.<a href="https://www.kindmeal.my/businesses.htm"> Find out more</a> or <a href="https://www.kindmeal.my/contact.htm">contact us</a> now.</h5>
+        <div id="Dir_input">
+            <input type="text" name="" id="search" placeholder="Search Shop Name">
+            <select name="" id="select" onchange="func1()">
+               <option value="All">All Shops In Malaysia</option>
+               <option value="Selangor">Selangor</option>
+               <option value="Kuala Lumpur">Kuala Lumpur</option>
+               <option value="Johor">Johor</option>
+               <option value="Kedah">Kedah</option>
+               <option value="Melaka">Melaka</option>
+               <option value="Negeri Sembilan">Negeri Sembilan</option>
+               <option value="Pahang">Pahang</option>
+               <option value="Penang">Penang</option>
+               <option value="Perak">Perak</option>
+               <option value="Terengganu">Terengganu</option>
+            </select>
+            <button id="butn1" onclick="func()">Search Shops</button>
+            <button id="butn2">Add A Shop</button>
+        </div>
+    </div>
+    <div id="filt">
+        <button id="tab1" style="background-color: #04be5a;color: white;">Vegetarian Directory</button>
+        <button id="tab2">Featured Restaurants</button>
+        <button id="tab3">Food Menu</button>
+        <button id="tab4">Food Map</button>
+    </div>
+    <div id="buttonss">Page:</div>
+    <div id="cont">
+    </div>
+    <div id="buttonss1">Page:</div>
+    <div id="footer">
+
+    </div>
+</body>
+</html>
+<script type="module">
+    let navbar = document.getElementById('navbar')
+    import DishplayNavbar from './components/navbar.js'
+    navbar.innerHTML = DishplayNavbar()
+
+    let footer = document.getElementById('footer')
+    import dishplayFooter from './components/footer.js'
+    footer.innerHTML = dishplayFooter()
+</script>
+<script src="directory.js"></script>
