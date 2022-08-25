@@ -103,7 +103,9 @@ let showButns1=(results,per_page)=>{
 }
 showButns1(results,per_page)
 
+// let pagination=(page_no)=>{
 
+// }
 
 
 
@@ -168,54 +170,24 @@ Data.map(function(ele){
 let tab1=document.getElementById("tab1");
 tab1.addEventListener("click",show);
 function show(){
-    tab1.style.backgroundColor="#04be5a";
-    tab1.style.color="white";
-    tab2.style.backgroundColor="white";
-    tab2.style.color="black";
-    tab3.style.backgroundColor="white";
-    tab3.style.color="black";
-    tab4.style.backgroundColor="white";
-    tab4.style.color="black";
     window.location.href="directory.html"
 
 }
 let tab2=document.getElementById("tab2");
 tab2.addEventListener("click",show1);
 function show1(){
-    tab2.style.backgroundColor="#04be5a";
-    tab2.style.color="white";
-    tab1.style.backgroundColor="white";
-    tab1.style.color="black";
-    tab3.style.backgroundColor="white";
-    tab3.style.color="black";
-    tab4.style.backgroundColor="white";
-    tab4.style.color="black";
     window.location.href="Featured Restaurants.html"
 }
 
 let tab3=document.getElementById("tab3");
 tab3.addEventListener("click",show2);
 function show2(){
-    tab3.style.backgroundColor="#04be5a";
-    tab3.style.color="white";
-    tab1.style.backgroundColor="white";
-    tab1.style.color="black";
-    tab2.style.backgroundColor="white";
-    tab2.style.color="black";
-    tab4.style.backgroundColor="white";
-    tab4.style.color="black";
+    window.location.href="Food Menu.html"
 }
 
 let tab4=document.getElementById("tab4");
 tab4.addEventListener("click",show3);
 function show3(){
-    tab4.style.backgroundColor="#04be5a";
-    tab4.style.color="white";
-    tab1.style.backgroundColor="white";
-    tab1.style.color="black";
-    tab2.style.backgroundColor="white";
-    tab2.style.color="black";
-    tab3.style.backgroundColor="white";
-    tab3.style.color="black";
+    window.location.href="Food Map.html"
 }
 

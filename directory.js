@@ -18,7 +18,8 @@ let Data=[
         Phone:"019-275 9973",
         Place:"Kuala Lumpur",
         Openinghours:"Fri - Wed: 9am - 4pm; Thu: Closed",
-        iframe:"https://maps.google.com/maps?q=Alam%20N-Ion&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        iframe:"https://maps.google.com/maps?q=Alam%20N-Ion&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        link:"https://www.google.com/maps?ll=3.070303,101.748772&z=13&t=m&hl=en-US&gl=US&mapclient=embed&cid=13763812646354419310"
     },
     {
         Name: "Annalakshmi Vegetarian Restaurant",
@@ -26,7 +27,8 @@ let Data=[
         Phone:"03-22723799, 03-22843799",
         Openinghours:"Tue-Sun 11am-3pm, 6:30-10pm.",
         Place:"Kuala Lumpur",
-        iframe:"https://maps.google.com/maps?q=AENON%20The%20Health%20Kitchen&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        iframe:"https://maps.google.com/maps?q=114-116,%20Jalan%20Berhala,%20Brickfields,%20Kuala%20Lumpur,%2050470,%20Wilayah%20Persekutuan&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        link:"https://maps.google.com/maps?ll=3.127736,101.687725&z=13&t=m&hl=en-US&gl=US&mapclient=embed&q=114-116%2C%20Jalan%20Berhala%2C%20Brickfields%2C%20Kuala%20Lumpur%2C%2050470%2C%20Wilayah%20Persekutuan"
     },
     {
         Name: "Ba Xian Vegetarian Court",
@@ -34,7 +36,8 @@ let Data=[
         Phone:"03-62778052",
         Openinghours:"Daily 10am-10pm.",
         Place:"Kuala Lumpur",
-        iframe:"https://maps.google.com/maps?q=AENON%20The%20Health%20Kitchen&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        iframe:"https://maps.google.com/maps?q=Ba%20Xian%20Vegetarian%20Court&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        link:"https://maps.google.com/maps?ll=3.207832,101.64&z=13&t=m&hl=en-US&gl=US&mapclient=embed&cid=15009245907692054618"
     },
     {
         Name: "Bakti Woodlands Vegetarian Food Cafe",
@@ -43,8 +46,8 @@ let Data=[
         Phone:"03-20342399",
         Openinghours:"Mon-Sun 7:30am-9:30pm",
         Place:"Kuala Lumpur",
-        iframe:"https://maps.google.com/maps?q=AENON%20The%20Health%20Kitchen&t=&z=13&ie=UTF8&iwloc=&output=embed",
-        link:"https://www.google.com/maps/place/NEWSTART+Health+Kitchen/@3.122992,101.721118,13z/data=!4m5!3m4!1s0x0:0x60d756ae90e2640!8m2!3d3.1229922!4d101.7211181?hl=en-US"
+        iframe:"https://maps.google.com/maps?q=Bakti%20Woodlands%20Vegetarian%20Food%20Cafe&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        link:'https://www.google.com/maps?ll=3.148978,101.697389&z=13&t=m&hl=en-US&gl=US&mapclient=embed&cid=15985928874165623125'
     },
     {
         Name: "Berjaya Cafe",
@@ -53,7 +56,8 @@ let Data=[
         Phone:"03-21178000",
         Openinghours:"Daily: 6:30am - 9:00pm",
         Place:"Kuala Lumpur",
-        iframe:"https://maps.google.com/maps?q=Alam%20N-Ion&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        iframe:"https://maps.google.com/maps?q=Berjaya%20Cafe&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        link:'https://www.google.com/maps/place/Berjaya+Cafe+(Vegetarian+buffet)/@3.14185,101.709883,13z/data=!4m5!3m4!1s0x0:0x8399954bb0afc71d!8m2!3d3.1418504!4d101.7098827?hl=en-US'
     },
 
     {
@@ -63,7 +67,8 @@ let Data=[
         Phone:"+603-2242 1473",
         Openinghours:"Mon-Sun, 10am-10pm",
         Place:"Kuala Lumpur",
-        iframe:"https://maps.google.com/maps?q=AENON%20The%20Health%20Kitchen&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        iframe:"https://maps.google.com/maps?q=Beyond%20Veggie%20-%20Nexus%20South%20Branch&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        link:'https://www.google.com/maps?ll=3.10968,101.665381&z=13&t=m&hl=en-US&gl=US&mapclient=embed&cid=15694143907822039583'
     },
     {
         Name: "Beyond Veggie - TTDI Branch",
@@ -72,7 +77,8 @@ let Data=[
         Phone:"+603-7722 1142",
         Openinghours:"Mon-Sun, 10am-10pm",
         Place:"Kuala Lumpur",
-        iframe:"https://maps.google.com/maps?q=AENON%20The%20Health%20Kitchen&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        iframe:"https://maps.google.com/maps?q=Beyond%20Veggie&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        link:'https://maps.google.com/maps?ll=5.323137,100.281916&z=13&t=m&hl=en-US&gl=US&mapclient=embed&cid=10840763283693185226'
     },
     {
         Name: "Biogreen Kepong Bukit Maluri",
@@ -80,8 +86,8 @@ let Data=[
         Phone:"03-6270 1284",
         Openinghours:"Mon-Sat: 10am - 7.30pm",
         Place:"Selangor",
-        iframe:"https://maps.google.com/maps?q=AENON%20The%20Health%20Kitchen&t=&z=13&ie=UTF8&iwloc=&output=embed",
-        link:"https://www.google.com/maps/place/NEWSTART+Health+Kitchen/@3.122992,101.721118,13z/data=!4m5!3m4!1s0x0:0x60d756ae90e2640!8m2!3d3.1229922!4d101.7211181?hl=en-US"
+        iframe:"https://maps.google.com/maps?q=Biogreen%20Kepong%20Bukit%20Maluri&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        link:"https://www.google.com/maps?ll=3.213133,101.642308&z=13&t=m&hl=en-US&gl=US&mapclient=embed&cid=2208954499060531361"
     },
     {
         Name: "Blue Boy Vegetarian Food Centre",
@@ -89,7 +95,8 @@ let Data=[
         Phone:"03-21449011",
         Openinghours:"Mon-Sun 8:00am-6:00pm",
         Place:"Selangor",
-        iframe:"https://maps.google.com/maps?q=Alam%20N-Ion&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        iframe:"https://maps.google.com/maps?q=Blue%20Boy%20Vegetarian%20Food%20Centre&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        link:'https://www.google.com/maps?ll=3.144797,101.70617&z=13&t=m&hl=en-US&gl=US&mapclient=embed&cid=5774480725711790334'
     }
 
 
@@ -151,7 +158,7 @@ let showButns1=(results,per_page)=>{
 }
 showButns1(results,per_page)
 
-
+let arr=JSON.parse(localStorage.getItem("dats"))||[]
 
 
 let cont=document.getElementById("cont")
@@ -166,6 +173,10 @@ Data.map(function(ele){
     let name = document.createElement("h2");
     name.innerText=ele.Name
     name.id="name"
+    name.addEventListener("click",function(){
+        displayed(ele)
+    })
+    name.style.cursor="pointer"
 
     let details=document.createElement('h4')
     details.innerText=ele.Details
@@ -233,6 +244,14 @@ Data.map(function(ele){
 }
 
 
+
+function displayed(ele){
+
+    localStorage.setItem("dats",JSON.stringify(ele))
+    window.location.href="nearshops.html"
+}
+
+
 let func1=()=>{
     let Datas = Data;
     let value = document.getElementById("select").value
@@ -284,26 +303,12 @@ function show1(){
 let tab3=document.getElementById("tab3");
 tab3.addEventListener("click",show2);
 function show2(){
-    tab3.style.backgroundColor="#04be5a";
-    tab3.style.color="white";
-    tab1.style.backgroundColor="white";
-    tab1.style.color="black";
-    tab2.style.backgroundColor="white";
-    tab2.style.color="black";
-    tab4.style.backgroundColor="white";
-    tab4.style.color="black";
+    window.location.href="Food Menu.html"
 }
 
 let tab4=document.getElementById("tab4");
 tab4.addEventListener("click",show3);
 function show3(){
-    tab4.style.backgroundColor="#04be5a";
-    tab4.style.color="white";
-    tab1.style.backgroundColor="white";
-    tab1.style.color="black";
-    tab2.style.backgroundColor="white";
-    tab2.style.color="black";
-    tab3.style.backgroundColor="white";
-    tab3.style.color="black";
+    window.location.href="Food Map.html"
 }
 
