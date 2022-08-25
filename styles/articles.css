@@ -7,6 +7,10 @@ body{
 .main{
     margin-bottom: 10%;
 }
+.pagination>ul>a{
+    color: blue;
+    gap: 15px;
+}
 
 
 #main_div  {
@@ -77,4 +81,9 @@ button{
 #top{
     margin-top: 5%;
     margin-bottom: 10%;
+}
+#bottom_div>tr{
+    color: #999999;
+
+
 }
