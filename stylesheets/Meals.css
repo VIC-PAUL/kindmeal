@@ -66,11 +66,11 @@
             font-size: large;
         }
         #container>div{
-            box-shadow: 1px 1px 3px rgb(220, 216, 216);
+            box-shadow: 1px 1px 3px rgba(192, 192, 192, 0.728);
             border-radius: 10px 10px 10px 10px;
         }
         #container>div>div{
-            padding: 15px;
+            padding: 0 15px;
             margin-top: -30px;
         }
         #container p{
@@ -82,11 +82,11 @@
         }
         #discount{
             position: relative;
-            bottom: 310px;
-            left : 10px;
+            bottom: 295px;
+            left : 18px;
             background-color: rgba(219, 218, 213, 0.888);
-            height: 30px;
-            width: 30px;
+            height: 50px;
+            width: 50px;
             border-radius: 50%;
             font-size: x-large;
             display: flex;
@@ -96,7 +96,6 @@
         #title{
             font-size: 20px;
             color:gray;
-            margin-top: -10px;
             margin-bottom: 10px;
         }
         #desc{
@@ -105,13 +104,16 @@
         #container button{
             margin-bottom: 20px;
             position: relative;
-            left: -157px;
+            left: -148px;
+            padding: 10px 20px;
+            font-weight: 700;
         }
         #bottom{
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 5px;
+            margin: 0px;
         }
         #logo img{
             width: 40px;
@@ -119,17 +121,10 @@
         }
         #bottom>p{
             color : rgb(242, 12, 12);
-            font-size: large;
-        }
-        #bottom>h4{
-            color : rgb(179, 175, 175);
             font-size: x-large;
         }
-        #downad{
-            background-color: rgba(203, 213, 223, 0.404);
-            text-align: center;
-            margin-top: 30px;
+        #bottom>h4{
+            color : gray;
+            font-size: x-large;
         }
-        #downad>img{
-            margin-top: 30px;
-        }
+

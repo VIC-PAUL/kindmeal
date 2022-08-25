@@ -242,14 +242,13 @@
         Desc.innerText = el.Desc
         Division1.append(Title,Desc)
         let Button = document.createElement("button")
-        Button.style.fontWeight = "700"
-        Button.style.padding = "10px 20px"
         Button.innerText = "Get FREE Coupon"
         let Division2 = document.createElement("div")
         Division2.setAttribute("id","bottom")
         let Discount2 = document.createElement("p")
         Discount2.style.textAlign = "center"
         Discount2.innerText = "KindMeal Discount" + "\n" + el.Discount + "% Off"
+        Discount2.style.fontSize = "18px"
         let Days = document.createElement("h4")
         Days.innerText = "Expire In" + "\n" + el.Expires + " Days"
         let Division3 = document.createElement("div")
