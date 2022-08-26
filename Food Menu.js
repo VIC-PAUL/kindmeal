@@ -184,7 +184,9 @@ Data.map(function(ele){
     image.style.width="100%"
     image.style.borderRadius="10px 10px 0 0"
     image.addEventListener("click",function(){
-        datshow(ele)
+        togglePopup()
+        dis(ele)
+        di()
     })
 
     let details=document.createElement('h4')
@@ -216,11 +218,177 @@ Data.map(function(ele){
 
 }
 
-function datshow(ele){
-    display(ele)
+let imageState = 0;
+
+function togglePopup(){
+    document.getElementById("popup-1").classList.toggle("active");
+    imageState = 0;
+}
+
+function dis(ele){
+
+    
+    document.getElementById("cont3").innerHTML=null;
+    let div1 = document.createElement("div");
+    
+    let image1 = document.createElement('img')
+    image1.src=ele.image;
+    image1.style.width="400px"
+    image1.style.height="350px" 
+    image1.style.marginLeft="80px" 
+    image1.style.paddingTop="20px"  
+    image1.id="image1"
+
+    let det=document.createElement("h4")
+    det.innerText=ele.Details
+    det.style.textAlign="center"
+    det.style.marginLeft="80px"
+    det.id="det"
+
+    let divs=document.createElement("div")
+    divs.style.marginTop="180px"
+    divs.style.display="flex"
+    divs.style.justifyContent="space-between"
+    divs.style.marginLeft="60px"
+
+    let buttns=document.createElement("button")
+    buttns.innerText="◀ Prev Item"
+    buttns.style.backgroundColor="#04be5a"
+    buttns.style.color="white"
+    buttns.style.padding="10px 20px"
+    buttns.style.border="0"
+    buttns.style.borderRadius="5px"
+    buttns.style.fontWeight="500"
+    buttns.addEventListener("click",function(){
+        di3()
+    })
+    
+
+    let buttns1=document.createElement("button")
+    buttns1.innerText="Next Item  ▶"
+    buttns1.style.backgroundColor="#04be5a"
+    buttns1.style.color="white"
+    buttns1.style.padding="10px 20px"
+    buttns1.style.border="0"
+    buttns1.style.borderRadius="5px"
+    buttns1.style.fontWeight="500"
+
+    buttns1.addEventListener("click",function(){
+        di2()
+    })
+
+    divs.append(buttns,buttns1)
+    
+    div1.append(image1,det)
+    document.getElementById("cont3").append(div1,divs)
 }
 
 
+
+
+
+
+function di2(){ 
+        imageState++;
+        if(imageState===Data.length){
+            imageState=0;
+        }
+        image1.src=Data[imageState].image;
+        det.innerText=Data[imageState].Details
+
+}
+
+function di3(){ 
+    imageState--;
+    if(imageState<0){
+        imageState=Data.length-1;
+    }
+    image1.src=Data[imageState].image;
+    det.innerText=Data[imageState].Details
+}
+
+
+
+
+function di(){
+    document.getElementById("cont6").innerHTML=null;
+    let div2 = document.createElement("div");
+    div2.id="div2"
+    
+    let image2 = document.createElement('img')
+    image2.src='https://www.kindmeal.my/photos/shop/3/335-2150-m.jpg'
+
+    let name=document.createElement("h4")
+    name.innerText="The Black Cat Cafe"
+    name.style.color="#666666"
+
+    let add=document.createElement("h5")
+    add.innerText="Address:"
+    add.style.color='grey'
+    add.style.textAlign="left"
+    add.style.fontWeight="500"
+
+    let ph=document.createElement("h5")
+    ph.innerText="Phone:"
+    ph.style.color='grey'
+    ph.style.textAlign="left"
+    ph.style.fontWeight="500"
+
+    let oh=document.createElement("h5")
+    oh.innerText="Opening Hours:"
+    oh.style.color='grey'
+    oh.style.textAlign="left"
+    oh.style.fontWeight="500"
+
+    let address=document.createElement('h5')
+    address.innerText="B-00-11 Viva Residency, Jalan Suppiah Pillay, 2nd mile Jalan Ipoh, 51200 Kuala Lumpur, Wilayah Persekutuan"
+    address.style.color='grey'
+    address.id="address"
+    address.style.textAlign="left"
+
+    let phone=document.createElement('h5')
+    phone.innerText="03-4050 2822 / 016-419 1309"
+    phone.style.color='grey'
+    phone.id="phone"
+    phone.style.textAlign="left"
+
+    let hours=document.createElement('h5')
+    hours.innerText="Mon - Sat: 11am - 9.30pm; Sun: Closed"
+    hours.style.color='grey'
+    hours.id="hours"
+    hours.style.textAlign="left"
+
+    let div3=document.createElement("div")
+    div3.style.display="grid"
+    div3.style.gap="10px"
+    
+
+    let buttn1=document.createElement("button")
+    buttn1.innerText="Meal Deals"
+    buttn1.style.border="0"
+    buttn1.style.padding="5px 0"
+    buttn1.style.borderRadius="5px"
+
+    let buttn2=document.createElement("button")
+    buttn2.innerText="Food Menu"
+    buttn2.style.border="0"
+    buttn2.style.padding="5px 0"
+    buttn2.style.borderRadius="5px"
+    buttn2.addEventListener("click",function(){
+        window.location.href="The Black Cat Cafe .html"
+    })
+
+    let buttn3=document.createElement("button")
+    buttn3.innerText="Outlets"
+    buttn3.style.border="0"
+    buttn3.style.padding="5px 0"
+    buttn3.style.borderRadius="5px"
+
+    div3.append(buttn1,buttn2,buttn3)
+    div2.append(image2,name,ph,phone,add,address,oh,hours,div3)
+    document.getElementById("cont6").append(div2)
+
+}
 
 
 let tab1=document.getElementById("tab1");
