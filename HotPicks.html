@@ -8,8 +8,8 @@
     <title>HotPicks</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./stylesheets/navbars.css">
-    <link rel="stylesheet" href="./stylesheets/footers.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
 
     <style>
         body {
@@ -66,16 +66,18 @@
             text-decoration: none;
             border: 1px solid #e3e3e3;
         }
-        #middlesection>button:hover{
+
+        #middlesection>button:hover {
             background-color: #2bb673;
             color: white;
         }
 
-        #container {
+        #wholedata>div {
             width: 70%;
             margin-left: 217px;
             padding: 40px;
             box-shadow: 1px 1px 4px rgb(90, 89, 89);
+            margin: 50px auto;
         }
 
         #containerHead {
@@ -206,168 +208,903 @@
         </div>
     </div>
     <div id="middlesection">
-        <button>All Categories</button>
-        <button>Pasta</button>
-        <button>Burger</button>
-        <button>Breakfast</button>
-        <button>Salad</button>
-        <button>Bakery</button>
-        <button>Tea&Desert</button>
-        <button>Local Delights</button>
-        <button>Jap & Korean</button>
-        <button>Chinese</button>
-        <button>Indian</button>
-        <button>Soup</button>
-        <button>Cute</button>
-        <button>DIY</button>
+        <button onclick="All()">All Categories</button>
+        <button onclick="pasta()">Pasta</button>
+        <button onclick="burger()">Burger</button>
+        <button onclick="breakfast()">Breakfast</button>
+        <button onclick="salad()">Salad</button>
+        <button onclick="pizza()">Bakery</button>
+        <button onclick="tea()">Tea&Desert</button>
+        <button onclick="delight()">Local Delights</button>
+        <button onclick="JK()">Jap & Korean</button>
+        <button onclick="chinese()">Chinese</button>
+        <button onclick="indian()">Indian</button>
+        <button onclick="soup()">Soup</button>
+        <button onclick="cute()">Cute</button>
+        <button onclick="DIY()">DIY</button>
     </div>
     <div id="wholedata"></div>
+    <div id="footer"></div>
 </body>
 
 </html>
 
 <script type="module">
-    import DisplayNavbar from "./componentss/navbars.js"
+    import DishplayNavbar from "./components/navbar.js"
+    import dishplayFooter from "./components/footer.js"
     let Navbar = document.querySelector("#navbar")
-    Navbar.innerHTML = DisplayNavbar()
+    Navbar.innerHTML = DishplayNavbar()
+    let Footer = document.querySelector("#footer")
+    Footer.innerHTML = dishplayFooter()
 </script>
 
 <script>
+
     let PastaData =
-  {
-    Heading: "Pasta Fiesta",
-    CardsData: [
-      {
-        cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
-        cardsdiscount: "20",
-        cardsname: "Mad About Food",
-      },
-      {
-        cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
-        cardsdiscount: "20",
-        cardsname: "Mad About Food",
-      },
-      {
-        cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
-        cardsdiscount: "20",
-        cardsname: "Mad About Food",
-      },
-      {
-        cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
-        cardsdiscount: "20",
-        cardsname: "Mad About Food",
-      },
-    ],
-    ReviewData: [
-      {
-        reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
-        reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
-        reviewname: "Calvinyee at Greens Home Kitchen:",
-        reviewdesc : "Nice enviroment with nice food..and you can enjoy their headset too."
-      },
-      {
-        reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
-        reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
-        reviewname: "Calvinyee at Greens Home Kitchen:",
-        reviewdesc : "Nice enviroment with nice food..and you can enjoy their headset too."
-      },
-      {
-        reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
-        reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
-        reviewname: "Calvinyee at Greens Home Kitchen:",
-        reviewdesc : "Nice enviroment with nice food..and you can enjoy their headset too."
-      },
-      {
-        reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
-        reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
-        reviewname: "Calvinyee at Greens Home Kitchen:",
-        reviewdesc : "Nice enviroment with nice food..and you can enjoy their headset too."
-      },
-    ],
-  }
+    {
+        Heading: "Pasta Fiesta",
+        CardsData: [
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+        ],
+        ReviewData: [
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+        ],
+    }
+
+
+
+    let BurgerData =
+    {
+        Heading: "Burger Bash",
+        CardsData: [
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+        ],
+        ReviewData: [
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+        ],
+    }
+
+
+    let SaladData =
+    {
+        Heading: "Healthy Salad",
+        CardsData: [
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+        ],
+        ReviewData: [
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+        ],
+    }
+
+
+
+    let PizzaData =
+    {
+        Heading: "Pizza, Bread & Bakery",
+        CardsData: [
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+        ],
+        ReviewData: [
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+        ],
+    }
+
+    let BreakFastData =
+    {
+        Heading: "BreakFast & Brunch",
+        CardsData: [
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+        ],
+        ReviewData: [
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+        ],
+    }
+
+
+
+    let TeaData =
+    {
+        Heading: "High Tea & Desert",
+        CardsData: [
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+        ],
+        ReviewData: [
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+        ],
+    }
+    let DelightData =
+    {
+        Heading: "Local Delight",
+        CardsData: [
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+        ],
+        ReviewData: [
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+        ],
+    }
+
+
+
+    let JapKorData =
+    {
+        Heading: "Japnese and Korean",
+        CardsData: [
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+        ],
+        ReviewData: [
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+        ],
+    }
+    let ChineseData =
+    {
+        Heading: "Chinese Vegeterian",
+        CardsData: [
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+        ],
+        ReviewData: [
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+        ],
+    }
+
+
+
+    let IndianData =
+    {
+        Heading: "Spicy Indian Cuisune",
+        CardsData: [
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+        ],
+        ReviewData: [
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+        ],
+    }
+
+
+    let SoupData =
+    {
+        Heading: "Creamy Soup",
+        CardsData: [
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+        ],
+        ReviewData: [
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+        ],
+    }
+
+
+
+    let CutenessData =
+    {
+        Heading: "Cuteness Overload",
+        CardsData: [
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+        ],
+        ReviewData: [
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+        ],
+    }
+
+    let DIYData =
+    {
+        Heading: "DIY Masterpiece",
+        CardsData: [
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+            {
+                cardsimage: "https://www.kindmeal.my/photos/deal/6/696-5075-m.jpg",
+                cardsdiscount: "20",
+                cardsname: "Mad About Food",
+            },
+        ],
+        ReviewData: [
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+            {
+                reviewimage: "https://www.kindmeal.my/photos/moment/16/16373-25137-m.jpg",
+                reviewlogo: "https://www.kindmeal.my/photos/member/33/33871-m.jpg",
+                reviewname: "Calvinyee at Greens Home Kitchen:",
+                reviewdesc: "Nice enviroment with nice food..and you can enjoy their headset too."
+            },
+        ],
+    }
+</script>
+
+<script>
+
 
     let wholedata = document.querySelector("#wholedata")
 
-    let Container = document.createElement("div")
-    Container.setAttribute("id","container")
-
-    let ContainerHead = document.createElement("div")
-    ContainerHead.setAttribute("id","containerHead")
-
-    let Heading = document.createElement("p")
-    Heading.innerText = `${PastaData.Heading}`
-    let division = document.createElement("div")
-    let anchor1 = document.createElement("a")
-    anchor1.href = "#"
-    anchor1.innerText = `View ${PastaData.Heading}`
-    let anchor2 = document.createElement("a")
-    anchor2.href = "#"
-    anchor2.innerText = `View All ${PastaData.Heading} Hot Picks`
-
-    division.append(anchor1,anchor2)
-    ContainerHead.append(Heading,division)
 
 
-    let carddivision = document.createElement("div")
-    carddivision.setAttribute("id","cards")
+    data(PastaData)
+    data(BurgerData)
+    data(BreakFastData)
+    data(SaladData)
+    data(PizzaData)
+    data(TeaData)
+    data(DelightData)
+    data(JapKorData)
+    data(ChineseData)
+    data(IndianData)
+    data(SoupData)
+    data(CutenessData)
+    data(DIYData)
+
+    function data(Data) {
+        let Container = document.createElement("div")
+        let ContainerHead = document.createElement("div")
+        ContainerHead.setAttribute("id", "containerHead")
+        let Heading = document.createElement("p")
+        Heading.innerText = `${Data.Heading}`
+        let division = document.createElement("div")
+        let anchor1 = document.createElement("a")
+        anchor1.href = "#"
+        anchor1.innerText = `View ${Data.Heading}`
+        let anchor2 = document.createElement("a")
+        anchor2.href = "#"
+        anchor2.innerText = `View All ${Data.Heading} Hot Picks`
+
+        division.append(anchor1, anchor2)
+        ContainerHead.append(Heading, division)
 
 
-    pastaData(PastaData)
-    function pastaData(PastaData){
-      PastaData.CardsData.forEach((el)=>{
-      let card1 = document.createElement("div")
-      let cardsimage = document.createElement("img")
-      cardsimage.src = el.cardsimage;
-      let cardsdiscount = document.createElement("div")
-      cardsdiscount.innerText = el.cardsdiscount+"%";
-      let cardsname = document.createElement("p")
-      cardsname.innerText = el.cardsname
-      card1.append(cardsimage,cardsdiscount,cardsname)
-      carddivision.append(card1)
-    })
-
-    let horizon = document.createElement("div")
-    horizon.setAttribute("class","hr")
-
-    Container.append(ContainerHead,carddivision,horizon)
-
-    
-
-    let containerHead2 = document.createElement("div")
-    containerHead2.setAttribute("id","containerHead2")
-
-    PastaData.ReviewData.forEach((el)=>{
-      let maindiv = document.createElement("div")
-      let reviewimage = document.createElement("img")
-      reviewimage.src = el.reviewimage;
-      let sidediv = document.createElement("div")
-      let side1div = document.createElement("div")
-      let reviewlogo = document.createElement("img")
-      reviewlogo.src = el.reviewlogo;
-      let reviewname = document.createElement("p")
-      reviewname.innerText = el.reviewname
-      side1div.append(reviewlogo,reviewname)
-      let reviewdesc = document.createElement("p")
-      reviewdesc.innerText = el.reviewdesc;
-      let readreview = document.createElement("p")
-      readreview.innerText = "Read Review"
-      sidediv.append(side1div,reviewdesc,readreview)
-      maindiv.append(reviewimage,sidediv)
-      containerHead2.append(maindiv)
-    })
+        let carddivision = document.createElement("div")
+        carddivision.setAttribute("id", "cards")
 
 
-    let bottom = document.createElement("div")
-    bottom.setAttribute("id","bottom")
-    bottom.innerText = `View All ${PastaData.Heading} Hot Picks`
+        Data.CardsData.forEach((el) => {
+            let card1 = document.createElement("div")
+            let cardsimage = document.createElement("img")
+            cardsimage.src = el.cardsimage;
+            let cardsdiscount = document.createElement("div")
+            cardsdiscount.innerText = el.cardsdiscount + "%";
+            let cardsname = document.createElement("p")
+            cardsname.innerText = el.cardsname
+            card1.append(cardsimage, cardsdiscount, cardsname)
+            carddivision.append(card1)
+        })
 
-    Container.append(containerHead2,bottom)
+        let horizon = document.createElement("div")
+        horizon.setAttribute("class", "hr")
 
-    wholedata.append(Container)
+        Container.append(ContainerHead, carddivision, horizon)
 
+
+
+        let containerHead2 = document.createElement("div")
+        containerHead2.setAttribute("id", "containerHead2")
+
+        Data.ReviewData.forEach((el) => {
+            let maindiv = document.createElement("div")
+            let reviewimage = document.createElement("img")
+            reviewimage.src = el.reviewimage;
+            let sidediv = document.createElement("div")
+            let side1div = document.createElement("div")
+            let reviewlogo = document.createElement("img")
+            reviewlogo.src = el.reviewlogo;
+            let reviewname = document.createElement("p")
+            reviewname.innerText = el.reviewname
+            side1div.append(reviewlogo, reviewname)
+            let reviewdesc = document.createElement("p")
+            reviewdesc.innerText = el.reviewdesc;
+            let readreview = document.createElement("p")
+            readreview.innerText = "Read Review"
+            sidediv.append(side1div, reviewdesc, readreview)
+            maindiv.append(reviewimage, sidediv)
+            containerHead2.append(maindiv)
+        })
+
+
+        let bottom = document.createElement("div")
+        bottom.setAttribute("id", "bottom")
+        bottom.innerText = `View All ${Data.Heading} Hot Picks`
+
+        Container.append(containerHead2, bottom)
+
+        wholedata.append(Container)
     }
 
-    
+    function All() {
+        wholedata.innerHTML = null
+        data(PastaData)
+        data(BurgerData)
+        data(BreakFastData)
+        data(SaladData)
+        data(PizzaData)
+        data(TeaData)
+        data(DelightData)
+        data(JapKorData)
+        data(ChineseData)
+        data(IndianData)
+        data(SoupData)
+        data(CutenessData)
+        data(DIYData)
+    }
+    function pasta() {
+        wholedata.innerHTML = null
+        data(PastaData)
+    }
+    function burger() {
+        wholedata.innerHTML = null
+        data(BurgerData)
+    }
+    function breakfast() {
+        wholedata.innerHTML = null
+        data(BreakFastData)
+    }
+    function salad() {
+        wholedata.innerHTML = null
+        data(SaladData)
+    }
+    function pizza() {
+        wholedata.innerHTML = null
+        data(PizzaData)
+    }
+    function tea() {
+        wholedata.innerHTML = null
+        data(TeaData)
+    }
+    function delight() {
+        wholedata.innerHTML = null
+        data(DelightData)
+    }
+    function JK() {
+        wholedata.innerHTML = null
+        data(JapKorData)
+    }
+    function chinese() {
+        wholedata.innerHTML = null
+        data(ChineseData)
+    }
+    function indian() {
+        wholedata.innerHTML = null
+        data(IndianData)
+    }
+    function soup() {
+        wholedata.innerHTML = null
+        data(SoupData)
+    }
+    function cute() {
+        wholedata.innerHTML = null
+        data(CutenessData)
+    }
+    function DIY() {
+        wholedata.innerHTML = null
+        data(DIYData)
+    }
 
 
 
