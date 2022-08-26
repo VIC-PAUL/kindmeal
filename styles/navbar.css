@@ -107,3 +107,12 @@ a {
     border-left: 1px solid rgb(198, 196, 196);
     padding: 5px;
 }
+#signup {
+  cursor: pointer;
+}
+#nav1-child-2 {
+  margin-top: 0px;
+}
+#nav1-child-2 img {
+  width: 40px;
+}

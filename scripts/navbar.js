@@ -29,7 +29,8 @@ function DishplayNavbar() {
         <a href="#">Articles</a>
         <a href="">Help</a>
     </div>
-</div>`
+</div>
+`
 }
 
 export default DishplayNavbar;

@@ -1,6 +1,5 @@
-
 function DishplayNavbar() {
-    return `<div id="nav-1">
+  return `<div id="nav-1">
     <div id="nav1-child-1">
         <img src="https://www.kindmeal.my/images/logo-kindmeal.png" alt="">
     </div>
@@ -32,7 +31,9 @@ function DishplayNavbar() {
         <a href="#">Articles</a>
         <a href="help.html">Help</a>
     </div>
-</div>`
+</div>
+
+`;
 }
 
 export default DishplayNavbar;

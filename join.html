@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.kindmeal.my/favicon.png"
+    />
+    <title>
+      Sign Up For Delicious Discounted Meat-Free Meals | KindMeal.my
+    </title>
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <style>
+      :root {
+        --text-color: #666666;
+        --border-color: #dddddd;
+        --link-color: #2184ff;
+      }
+
+      .link-here {
+        color: var(--text-color);
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      .link-here:hover {
+        text-decoration: underline;
+      }
+      .logo img {
+        width: 160px;
+      }
+      .logo {
+        display: grid;
+        width: max-content;
+        text-align: center;
+        margin-top: 50px;
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        padding: 25px 15px;
+        min-width: 250px;
+        place-items: center;
+        cursor: pointer;
+      }
+      .main-div {
+        width: 80%;
+        margin: auto;
+        display: flex;
+      }
+      ul {
+        margin-left: -15px;
+        padding-top: 10px;
+      }
+      li {
+        color: var(--text-color);
+        font-size: 15px;
+        text-align: left;
+        margin-left: 40px;
+        margin-top: 5px;
+        font-size: 14px;
+      }
+      li span {
+        margin-left: 2px;
+      }
+      .blue {
+        color: var(--link-color)
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div class="main-div">
+      <div class="left-div">
+        <div
+          style="background-color: #f8f8f8; padding-bottom: 50px"
+          class="logo"
+        >
+          <img src="https://www.kindmeal.my/images/join_normal.png" alt="" />
+          <a class="link-here" href="join.html">Food Lover Sign Up</a>
+        </div>
+        <div class="logo">
+          <img src="https://www.kindmeal.my/images/join_shop.png" alt="" />
+          <a class="link-here" href="joinshop.html">Restaurant Sign Up</a>
+        </div>
+        <div style="width: 200px; max-width: 200px" class="logo">
+          <p style="font-size: 22px">Why KindMeal?</p>
+          <ul>
+            <li><span>Exclusive meat-free deals</span></li>
+            <li><span>Share yummy food moments</span></li>
+            <li><span>Meet friendly food lovers</span></li>
+            <li><span>Discover cool restaurants</span></li>
+            <li><span>Email updates on tasty deals</span></li>
+            <li><span>Instant coupons & dining</span></li>
+            <li><span>No upfront payment, booking or printing</span></li>
+          </ul>
+          <a href="" class="link-here">More about KindMeal »</a>
+        </div>
+      </div>
+      <div class="right-div">
+        <h1 style="font-weight: 500">
+          Food Lover? Sign Up Now or
+          <a href="" class="blue"><h1 style="font-weight: 500;display: inline;">Login With Facebook</h1></a>
+        </h1>
+      </div>
+    </div>
+    <!-- <div id="footer"></div> -->
+  </body>
+</html>
+<script type="module">
+  let navbar = document.getElementById("navbar");
+  import DishplayNavbar from "./components/navbar.js";
+  navbar.innerHTML = DishplayNavbar();
+
+  let footer = document.getElementById("footer");
+  import dishplayFooter from "./components/footer.js";
+  footer.innerHTML = dishplayFooter();
+</script>
+<script src="./scripts/join.js"></script>

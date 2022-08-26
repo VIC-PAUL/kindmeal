@@ -8,7 +8,7 @@
     <title>Delicious Meat-Free Meals, Vegetarian Cuisines, Kind Meal Discount Coupons for Restaurants & Cafes in
         Malaysia | KindMeal.my</title>
     <link rel="icon" type="image/png" href="https://i.ibb.co/LZpBhMB/unnamed-removebg-preview.png">
-
+    <link rel="stylesheet" href="styles/modal.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/index.css">
@@ -57,7 +57,7 @@
         </div>
       </div>
       <div class="bottomText">
-        <a href="#">Member Login</a>
+        <a href="#" onclick="loginRedirect()">Member Login</a>
         <a href="#">Forgot Password ?</a>
       </div>
     </div>
@@ -81,7 +81,7 @@
       </div>
       <div class="bottomText">
         <a href="#">Forgot Password ?</a>
-        <a href="#">Not a member? Sign up FREE!</a>
+        <a href="#" onclick="signupRedirect()">Not a member? Sign up FREE!</a>
       </div>
     </div>
     <div id="container1">
@@ -320,3 +320,4 @@
     footer.innerHTML = dishplayFooter()
 </script>
 <script src="./scripts/index.js"></script>
+<script src="./scripts/modal.js"></script>
