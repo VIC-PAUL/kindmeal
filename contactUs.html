@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Help | KindMeal.my</title>
+    <link rel="icon" type="image/png" href="https://i.ibb.co/LZpBhMB/unnamed-removebg-preview.png">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/help.css">
+</head>
+<style>
+    #input-box {
+
+        height: auto;
+        width: 60%;
+        margin-left: 100px;
+
+    }
+
+    #input-box>div {
+        width: 25%;
+        /* border: 1px solid red; */
+        display: inline-block;
+        color: #444444;
+        font-size: 20px;
+    }
+
+    #input-box>input,
+    select {
+        width: 75%;
+        height: 40px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid rgb(200, 199, 199);
+        font-size: 18px;
+    }
+
+    #msg-box {
+        width: 80%;
+
+        height: auto;
+        margin-left: 100px;
+    }
+
+    #msg-box>div {
+        width: 19%;
+        display: inline-block;
+        color: #444444;
+        font-size: 20px;
+        vertical-align: top;
+
+    }
+
+    #msg-box>textarea {
+        height: 300px;
+        width: 80%;
+        border-radius: 5px;
+        border: 1px solid rgb(200, 199, 199);
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    button {
+        background-color: #f53838;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 12px 45px;
+        border: none;
+        font-size: 20px;
+        border-radius: 10px;
+        margin-top: 100px;
+        margin-left: 35%;
+    }
+</style>
+
+<body>
+    <div id="navbar"> </div>
+    <div id="container">
+        <div id="child-1">
+            <div class="child-1-inner">
+                <img src="https://www.kindmeal.my/images/join_normal.png" alt="">
+                <a href="">General Help</a>
+            </div>
+            <div class="child-1-inner">
+                <img src="https://www.kindmeal.my/images/join_shop.png" alt="">
+                <a href="">Merchant Help</a>
+            </div>
+            <div class="child-1-inner">
+                <img src="https://www.kindmeal.my/images/icon-megaphone.png" alt="">
+                <a href="">Advertising</a>
+            </div>
+            <div class="child-1-inner">
+                <img src="https://www.kindmeal.my/images/about_us.png" alt="">
+                <a href="AboutKindMeal.html">About KindMeal</a>
+            </div>
+            <div class="child-1-inner">
+                <img src="https://www.kindmeal.my/images/about_hero.png" alt="">
+                <a href="">SuperHero Guide</a>
+            </div>
+            <div class="child-1-inner">
+                <img src="https://www.kindmeal.my/images/contact.png" alt="">
+                <a href="">Contact Us</a>
+            </div>
+        </div>
+        <div id="child-2" style="height:900px;">
+            <div id="child-2-inner-1">
+                <div id="child-2-inner-1-heading" style="text-align:center;">Contact KindMeal.my</div>
+                <div class="child-2-inner-2-para" style="font-size:14px;">Do you have any questions, suggestions or
+                    require assistance? Please
+                    tell us more about it. We'd love to hear from you!</div>
+            </div>
+            <div id="input-box">
+                <div>Name</div><input type="text" id="name">
+                <div>Email</div><input type="text" id="Email">
+                <div>Phone</div><input type="text" id="phone">
+                <div>Topic</div><select name="" id="topic">
+                    <option value="">-----[Select Topics]-----</option>
+                    <option value="">Generak Enquiry</option>
+                    <option value="">Account Issues</option>
+                    <option value="">Advertising</option>
+                    <option value="">Ambassador Program</option>
+                    <option value="">Bug Report</option>
+                    <option value="">Contest</option>
+                    <option value="">Feedback And Suggestion</option>
+                    <option value="">Free Meal</option>
+                    <option value="">Blogger</option>
+                    <option value="">Mobile App</option>
+                    <option value="">Vacancy</option>
+                    <option value="">Other</option>
+                </select>
+            </div>
+            <div id="msg-box">
+                <div>Message</div><textarea id="msg" cols="30" rows="10"></textarea>
+            </div>
+            <button onclick="submit()">Send Message</button>
+        </div>
+    </div>
+    <div id="footer">
+
+    </div>
+
+</body>
+
+</html>
+<script type="module">
+    let navbar = document.getElementById('navbar')
+    import DishplayNavbar from './components/navbar.js'
+    navbar.innerHTML = DishplayNavbar()
+
+    let footer = document.getElementById('footer')
+    import dishplayFooter from './components/footer.js'
+    footer.innerHTML = dishplayFooter()
+</script>
+<script src="scripts/contactUs.js"></script>
