@@ -9,14 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./stylesheets/Meals.css">
-    <link rel="stylesheet" href="./stylesheets/navbar.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
 </head>
 <body>
+    <div id="navbar"></div>
     <div id="topsection">
-        <div id="navbar"></div>
         <div>
             <div id="topheading">
-                <h5>Meat-Free Deals</h5>
+                <h6>Meat-Free Deals</h6>
                 <p>Restaurants In Malaysia</p>
             </div>
             <div>
@@ -25,33 +26,321 @@
                 <p>Download our mobile app now to easily get coupons and start dining in a few seconds. Effortlessly save lives, health, environment and money now!</p>
             </div>
             <div id="input">
-            <input type="text" id="search" placeholder="Search Shop or Deal Name">
-            <select id="category" onchange="filters()">
-                <option value="select">Select Catgory</option>
-                <option value="Pasta">Pasta</option>
-                <option value="Soup">Soup</option>
-                <option value="Tea&Desert">Tea and Desert</option>
-                <option value="Burger">Burger</option>
-                <option value="Indian Thali">Indian</option>
-                <option value="Chinese">Chinese</option>
+            <input type="text" placeholder="Search Shop or Deal Name" oninput="search()" id="search">
+            <select id="SortDiscount" onchange="SortDiscount()">
+                <option value="select">Sort By Discount</option>
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
             </select>
-            <button onclick="search()">Search Deals</button>
+            <select id="SortExpiry" onchange="SortExpiry()">
+                <option>Sort By Expiry</option>
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </select>
+            <button  >Search Deals</button>
+            <button>Browse Restaurants</button>
         </div>
         </div>
     </div>
 
     <div id="middlesection">
-        <img src="https://www.kindmeal.my/images/ads/banner_advertising-1100x280.png" alt="advertisement">
-        <div id="buttons"></div>
+        <img src="https://www.kindmeal.my/images/banner_directory.jpg" alt="advertisement">
         <div id="container"></div>
     </div>
+    <div id="downad">
+        <img src="https://www.kindmeal.my/images/how_kindmeal_works.png" alt="">
+    </div>
+    <div id="footer"></div>
 </body>
 </html>
 
 <script type="module">
-    import DishplayNavbar from "./scripts/navbar.js"
+    import DishplayNavbar from "./components/navbar.js"
+    import dishplayFooter from "./components/footer.js"
     let Navbar = document.querySelector("#navbar")
     Navbar.innerHTML = DishplayNavbar()
+    let Footer = document.querySelector("#footer")
+    Footer.innerHTML = dishplayFooter()
 </script>
 
 <script src="./scripts/Meals.js"></script>
+
+<script>
+    let Data = [
+        {
+            Image : "https://www.kindmeal.my/photos/deal/7/720-5195-l.jpg",
+            Discount : "10",
+            Name : "Yishensu Groceries Ipoh",
+            Desc : "Yishensu Groceries, Ipoh offers you a wide range of healthy, nutritious and tasty vegetarian products! We develop our own exclus..",
+            Expires : "5",
+            Logo1 : "https://www.kindmeal.my/images/icon_egg.png",
+            Logo2 : "https://www.kindmeal.my/images/icon_milk.png",
+            Logo3 : "https://www.kindmeal.my/images/icon_alcohol.png"
+        },
+        
+        {
+            Image : "https://www.kindmeal.my/photos/deal/6/649-3919-l.jpg",
+            Discount : "15",
+            Name : "Vegelab —  Cheras, Kuala Lumpur",
+            Desc : "Experience our delectable selection of fusion Western cuisine, crafted with heart to promote a healthy and compassionate eating li..",
+            Expires : "6",
+            Logo1 : "https://www.kindmeal.my/images/icon_egg.png",
+            Logo2 : "https://www.kindmeal.my/images/icon_milk.png",
+            Logo3 : "https://www.kindmeal.my/images/icon_alcohol.png"
+        },
+
+        {
+            Image : "https://www.kindmeal.my/photos/deal/7/712-5119-l.jpg",
+            Discount : "20",
+            Name : "Hijau —  Kuala Lumpur, Wilayah Persekutuan",
+            Desc : "Indulge in Malay-Indo fusion cuisine, a plant-based comfort food and healthy pleasure! Hijau is your go-to, where you can embrac..",
+            Expires : "8",
+            Logo1 : "https://www.kindmeal.my/images/icon_egg.png",
+            Logo2 : "https://www.kindmeal.my/images/icon_milk.png",
+            Logo3 : "https://www.kindmeal.my/images/icon_alcohol.png"
+        },
+        
+        {
+            Image : "https://www.kindmeal.my/photos/deal/4/403-1390-l.jpg",
+            Discount : "15",
+            Name : "Jamaica Blue —  Shah Alam & 1 Branch",
+            Desc : "Serving classic dishes with a contemporary twist, using the freshest and seasonal ingredients. Select from any of our meat-free i..",
+            Expires : "1",
+            Logo1 : "https://www.kindmeal.my/images/icon_egg.png",
+            Logo2 : "https://www.kindmeal.my/images/icon_milk.png",
+            Logo3 : "https://www.kindmeal.my/images/icon_alcohol.png"
+        },
+
+        {
+            Image : "https://www.kindmeal.my/photos/deal/5/529-2478-l.jpg",
+            Discount : "10",
+            Name : "Dining Bowl —  Kuala Lumpur, Wilayah Persekutuan",
+            Desc : "Dining Bowl —  Kuala Lumpur, Wilayah Persekutuan",
+            Expires : "3",
+            Logo1 : "https://www.kindmeal.my/images/icon_egg.png",
+            Logo2 : "https://www.kindmeal.my/images/icon_milk.png",
+            Logo3 : "https://www.kindmeal.my/images/icon_alcohol.png"
+        },
+        
+        {
+            Image : "https://www.kindmeal.my/photos/deal/6/610-3386-l.jpg",
+            Discount : "15",
+            Name : "Vegelab —  Cheras, Kuala Lumpur",
+            Desc : "Experience our delectable selection of fusion Western cuisine, crafted with heart to promote a healthy and compassionate eating li..",
+            Expires : "9",
+            Logo1 : "https://www.kindmeal.my/images/icon_egg.png",
+            Logo2 : "https://www.kindmeal.my/images/icon_milk.png",
+            Logo3 : "https://www.kindmeal.my/images/icon_alcohol.png"
+        },
+        
+        {
+            Image : "https://www.kindmeal.my/photos/deal/6/649-3919-l.jpg",
+            Discount : "14",
+            Name : "Vegelab —  Cheras, Kuala Lumpur",
+            Desc : "Experience our delectable selection of fusion Western cuisine, crafted with heart to promote a healthy and compassionate eating li..",
+            Expires : "6",
+            Logo1 : "https://www.kindmeal.my/images/icon_egg.png",
+            Logo2 : "https://www.kindmeal.my/images/icon_milk.png",
+            Logo3 : "https://www.kindmeal.my/images/icon_alcohol.png"
+        },
+
+        {
+            Image : "https://www.kindmeal.my/photos/deal/7/712-5119-l.jpg",
+            Discount : "24",
+            Name : "Hijau —  Kuala Lumpur, Wilayah Persekutuan",
+            Desc : "Indulge in Malay-Indo fusion cuisine, a plant-based comfort food and healthy pleasure! Hijau is your go-to, where you can embrac..",
+            Expires : "8 ",
+            Logo1 : "https://www.kindmeal.my/images/icon_egg.png",
+            Logo2 : "https://www.kindmeal.my/images/icon_milk.png",
+            Logo3 : "https://www.kindmeal.my/images/icon_alcohol.png"
+        },
+        
+        {
+            Image : "https://www.kindmeal.my/photos/deal/4/403-1390-l.jpg",
+            Discount : "11",
+            Name : "Jamaica Blue —  Shah Alam & 1 Branch",
+            Desc : "Serving classic dishes with a contemporary twist, using the freshest and seasonal ingredients. Select from any of our meat-free i..",
+            Expires : "9",
+            Logo1 : "https://www.kindmeal.my/images/icon_egg.png",
+            Logo2 : "https://www.kindmeal.my/images/icon_milk.png",
+            Logo3 : "https://www.kindmeal.my/images/icon_alcohol.png"
+        },
+
+        {
+            Image : "https://www.kindmeal.my/photos/deal/5/591-3151-l.jpg",
+            Discount : "18",
+            Name : "Dining Bowl —  Kuala Lumpur, Wilayah Persekutuan",
+            Desc : "Dining Bowl —  Kuala Lumpur, Wilayah Persekutuan",
+            Expires : "3",
+            Logo1 : "https://www.kindmeal.my/images/icon_egg.png",
+            Logo2 : "https://www.kindmeal.my/images/icon_milk.png",
+            Logo3 : "https://www.kindmeal.my/images/icon_alcohol.png"
+        },
+        
+        {
+            Image : "https://www.kindmeal.my/photos/deal/7/717-5054-l.jpg",
+            Discount : "14",
+            Name : "Vegelab —  Cheras, Kuala Lumpur",
+            Desc : "Experience our delectable selection of fusion Western cuisine, crafted with heart to promote a healthy and compassionate eating li..",
+            Expires : "6",
+            Logo1 : "https://www.kindmeal.my/images/icon_egg.png",
+            Logo2 : "https://www.kindmeal.my/images/icon_milk.png",
+            Logo3 : "https://www.kindmeal.my/images/icon_alcohol.png"
+        },
+
+        {
+            Image : "https://www.kindmeal.my/photos/deal/6/664-4296-m.jpg",
+            Discount : "10",
+            Name : "Hijau —  Kuala Lumpur, Wilayah Persekutuan",
+            Desc : "Indulge in Malay-Indo fusion cuisine, a plant-based comfort food and healthy pleasure! Hijau is your go-to, where you can embrac..",
+            Expires : "8",
+            Logo1 : "https://www.kindmeal.my/images/icon_egg.png",
+            Logo2 : "https://www.kindmeal.my/images/icon_milk.png",
+            Logo3 : "https://www.kindmeal.my/images/icon_alcohol.png"
+        },
+        
+        {
+            Image : "https://www.kindmeal.my/photos/deal/4/403-1390-l.jpg",
+            Discount : "25",
+            Name : "Jamaica Blue —  Shah Alam & 1 Branch",
+            Desc : "Serving classic dishes with a contemporary twist, using the freshest and seasonal ingredients. Select from any of our meat-free i..",
+            Expires : "7",
+            Logo1 : "https://www.kindmeal.my/images/icon_egg.png",
+            Logo2 : "https://www.kindmeal.my/images/icon_milk.png",
+            Logo3 : "https://www.kindmeal.my/images/icon_alcohol.png"
+        },
+
+        {
+            Image : "https://www.kindmeal.my/photos/deal/5/529-2478-l.jpg",
+            Discount : "30",
+            Name : "Dining Bowl —  Kuala Lumpur, Wilayah Persekutuan",
+            Desc : "Dining Bowl —  Kuala Lumpur, Wilayah Persekutuan",
+            Expires : "3",
+            Logo1 : "https://www.kindmeal.my/images/icon_egg.png",
+            Logo2 : "https://www.kindmeal.my/images/icon_milk.png",
+            Logo3 : "https://www.kindmeal.my/images/icon_alcohol.png"
+        }
+    ]
+    let Container = document.querySelector("#container")
+
+    display(Data)
+        function display(Data){
+        Container.innerHTML = null
+        Data.forEach((el)=>{
+        let Division = document.createElement("div")
+        let Image = document.createElement("img")
+        Image.src = el.Image;
+        let Discount = document.createElement("div")
+        Discount.setAttribute("id","discount")
+        Discount.innerText = el.Discount + "%"
+        let Division1 = document.createElement("div")
+        let Title = document.createElement("p")
+        Title.setAttribute("id","title")
+        Title.innerText = el.Name;
+        let Desc = document.createElement("p")
+        Desc.setAttribute("id","desc")
+        Desc.innerText = el.Desc
+        Division1.append(Title,Desc)
+        let Button = document.createElement("button")
+        Button.innerText = "Get FREE Coupon"
+        let Division2 = document.createElement("div")
+        Division2.setAttribute("id","bottom")
+        let Discount2 = document.createElement("p")
+        Discount2.style.textAlign = "center"
+        Discount2.innerText = "KindMeal Discount" + "\n" + el.Discount + "% Off"
+        Discount2.style.fontSize = "18px"
+        let Days = document.createElement("h4")
+        Days.innerText = "Expire In" + "\n" + el.Expires + " Days"
+        let Division3 = document.createElement("div")
+        Division3.setAttribute("id","logo")
+        let Logo1 = document.createElement("img")
+        Logo1.src = el.Logo1
+        let Logo2 = document.createElement("img")
+        Logo2.src = el.Logo2
+        let Logo3 = document.createElement("img")
+        Logo3.src = el.Logo3
+        Division3.append(Logo1,Logo2,Logo3)
+        Division2.append(Division3,Discount2,Days)
+        Division.append(Image,Discount,Division1,Button,Division2)
+        Container.append(Division)
+    })
+}
+
+function SortDiscount(){
+    let newData = Data;
+    let Sort = document.querySelector("#SortDiscount");
+    let sortData = newData.sort((a,b)=>{
+        if(Sort.value == "asc"){
+            if(a.Discount>b.Discount){
+                return 1
+            }
+            if(b.Discount>a.Discount){
+                return -1
+            }
+            return 0
+        }
+        else if(Sort.value == "desc"){
+            if(a.Discount>b.Discount){
+                return -1
+            }
+            if(b.Discount>a.Discount){
+                return 1
+            }
+            return 0
+        }
+    })
+    display(sortData)
+}
+
+
+function SortExpiry(){
+    let newData = Data;
+    let sort = document.querySelector("#SortExpiry");
+    let sortData = newData.sort((a,b)=>{
+        if(sort.value == "asc"){
+            if(a.Expires>b.Expires){
+                return 1
+            }
+            if(b.Expires>a.Expires){
+                return -1
+            }
+            return 0
+        }
+        else if(sort.value == "desc"){
+            if(a.Expires>b.Expires){
+                return -1
+            }
+            if(b.Expires>a.Expires){
+                return 1
+            }
+            return 0
+        }
+    })
+    display(sortData)
+}
+
+function search(){
+    let inputvalue = document.querySelector("#search")
+    let newData = Data;
+    let sortData = newData.filter((el)=>{
+        return el.Name.includes(inputvalue.value)
+    })
+    display(sortData)
+
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
