@@ -1,85 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="directory.css">
-</head>
-<body>
+    <link rel="stylesheet" href="directory.css" />
+  </head>
+  <body>
     <div id="Dir_top">
-        <h2>Vegetarian Restaurants In Malaysia</h2>
-        <h5>Looking for even more delicious choices? Explore hundreds of vegetarian and vegan restaurants in Malaysia.</h5>
-        <h5> Are you a restaurant or cafe owner? Boost your business with an attractive KindMeal profile and deals for FREE.<a href="https://www.kindmeal.my/businesses.htm"> Find out more</a> or <a href="https://www.kindmeal.my/contact.htm">contact us</a> now.</h5>
-        <div id="Dir_input">
-            <input type="text" name="" id="search" placeholder="Search Shop Name">
-            <select name="" id="select" onchange="func1()">
-               <option value="All">All Shops In Malaysia</option>
-               <option value="Selangor">Selangor</option>
-               <option value="Kuala Lumpur">Kuala Lumpur</option>
-               <option value="Johor">Johor</option>
-               <option value="Kedah">Kedah</option>
-               <option value="Melaka">Melaka</option>
-               <option value="Negeri Sembilan">Negeri Sembilan</option>
-               <option value="Pahang">Pahang</option>
-               <option value="Penang">Penang</option>
-               <option value="Perak">Perak</option>
-               <option value="Terengganu">Terengganu</option>
-            </select>
-            <button id="butn1" onclick="func()">Search Shops</button>
-            <button id="butn2">Add A Shop</button>
-        </div>
+      <h2>Vegetarian Restaurants In Malaysia</h2>
+      <h5>
+        Looking for even more delicious choices? Explore hundreds of vegetarian
+        and vegan restaurants in Malaysia.
+      </h5>
+      <h5>
+        Are you a restaurant or cafe owner? Boost your business with an
+        attractive KindMeal profile and deals for FREE.<a
+          href="https://www.kindmeal.my/businesses.htm"
+        >
+          Find out more</a
+        >
+        or <a href="https://www.kindmeal.my/contact.htm">contact us</a> now.
+      </h5>
+      <div id="Dir_input">
+        <input type="text" name="" id="search" placeholder="Search Shop Name" />
+        <select name="" id="select" onchange="func1()">
+          <option value="All">All Shops In Malaysia</option>
+          <option value="Selangor">Selangor</option>
+          <option value="Kuala Lumpur">Kuala Lumpur</option>
+          <option value="Johor">Johor</option>
+          <option value="Kedah">Kedah</option>
+          <option value="Melaka">Melaka</option>
+          <option value="Negeri Sembilan">Negeri Sembilan</option>
+          <option value="Pahang">Pahang</option>
+          <option value="Penang">Penang</option>
+          <option value="Perak">Perak</option>
+          <option value="Terengganu">Terengganu</option>
+        </select>
+        <button id="butn1" onclick="func()">Search Shops</button>
+        <button id="butn2">Add A Shop</button>
+      </div>
     </div>
     <div id="filt">
-        <button id="tab1" style="background-color: #04be5a;color: white;">Vegetarian Directory</button>
-        <button id="tab2">Featured Restaurants</button>
-        <button id="tab3">Food Menu</button>
-        <button id="tab4">Food Map</button>
+      <button id="tab1" style="background-color: #04be5a; color: white">
+        Vegetarian Directory
+      </button>
+      <button id="tab2">Featured Restaurants</button>
+      <button id="tab3">Food Menu</button>
+      <button id="tab4">Food Map</button>
     </div>
     <div id="conts">
-        <div> <div id="cont4"></div>
-        <div id="cont5"><table border="0" class="deal_table" cellspacing="0" cellpadding="10" style="width:800px; min-height:300px; margin-bottom: 40px; padding:10px; font-color:#666666; font-size:14px;">
-            <tbody><tr><td width="50%" valign="top" class="deal_text">
-            <div style="font-size:26px; margin-bottom:10px; color:#222222; text-align:left;">Customers Also Like</div><ol>
-                        <li><a href="https://www.kindmeal.my/directory/872" class="blue"><b>Newstart Health Kitchen</b></a><br>1, Jalan 4/93, Taman Miharja, Jalan Cheras, 55200 Kuala Lumpur<br><br></li>            <li><a href="https://www.kindmeal.my/directory/20" class="blue"><b>Choy Ma's Kitchen</b></a><br>36 A Jalan Desa Bakti, Faber Plaza, Taman Desa (at Jalan Klang Lama), Kuala Lumpur, 58100<br><br></li>            <li><a href="https://www.kindmeal.my/directory/21" class="blue"><b>De Health Paradise Organic</b></a><br>14-0 Ground Floor, Jalan 1/190E (at Desa Business Park), Kuala Lumpur, Malaysia<br><br></li>            <li><a href="https://www.kindmeal.my/directory/176" class="blue"><b>Lian Chi Vege Health Food Restaurant</b></a><br>54, Jalan SS 23/11, Taman Sea, 47400 Petaling Jaya, Selangor<br><br></li>            <li><a href="https://www.kindmeal.my/directory/193" class="blue"><b>Love Health Vegetarian Restaurant</b></a><br>No. 3 - 1, Dataran Sunway Kota Damansara, Jalan PJU 5/9, Kota Damansara, 47810 Petaling Jaya, Selangor<br><br></li>            <li><a href="https://www.kindmeal.my/directory/195" class="blue"><b>Meng Tuck Health Food Centre</b></a><br>133, Jln SS 2/6, Petaling Jaya, 47300<br><br></li>            <li><a href="https://www.kindmeal.my/directory/209" class="blue"><b>Niche Vege Kitchen 好地方素食馆</b></a><br>19, Jalan 14/22, Seksyen 14, 46100 Petaling Jaya, Selangor<br><br></li>            <li><a href="https://www.kindmeal.my/directory/329" class="blue"><b>Chef Low Organic Kitchen</b></a><br>Unit C-G-43, Blok Camilia, 10 Boulevard, Lebuhraya Sprint PJU6A, E23, 47400 Petaling Jaya<br><br></li>            <li><a href="https://www.kindmeal.my/directory/331" class="blue"><b>Eco Life Kitchen</b></a><br>No. 40-4 (Level 4), Jalan Metro Pudu, Fraser Business Park, off Jalan Yew, 55100 Kuala Lumpur<br><br></li>            <li><a href="https://www.kindmeal.my/directory/372" class="blue"><b>Merryland Vegetarian Health Food</b></a><br>46, Jalan Bakawali 48, Johor Jaya, 81100 Johor Bahru<br><br></li>
-            </ol></td>
-            <td width="50%" valign="top" class="deal_text">
-            <div style="font-size:26px; margin-bottom:10px; color:#222222; text-align:left;">Nearby Restaurants</div><ol>
-                        <li><a href="https://www.kindmeal.my/directory/872" class="blue"><b>Newstart Health Kitchen</b></a><br>1, Jalan 4/93, Taman Miharja, Jalan Cheras, 55200 Kuala Lumpur<br><br></li>            <li><a href="https://www.kindmeal.my/directory/36" class="blue"><b>Kechara Oasis (Viva Home)</b></a><br>85, Jalan Loke Yew, Kuala Lumpur, 55200<br><br></li>            <li><a href="https://www.kindmeal.my/directory/81" class="blue"><b>Tian Yian Cafe</b></a><br>5, Jalan 3/93, Taman Miharja, 55200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur<br><br></li>            <li><a href="https://www.kindmeal.my/directory/331" class="blue"><b>Eco Life Kitchen</b></a><br>No. 40-4 (Level 4), Jalan Metro Pudu, Fraser Business Park, off Jalan Yew, 55100 Kuala Lumpur<br><br></li>            <li><a href="https://www.kindmeal.my/directory/848" class="blue"><b>Rawsome (MyTown)</b></a><br>Lot No. G-072, Ground Floor, MyTOWN Shopping Centre, No.6, Jalan Cochrane, 60000 Kuala Lumpur<br><br></li>            <li><a href="https://www.kindmeal.my/directory/22" class="blue"><b>Earth Kid Enterprise</b></a><br>62A-1, 1st Floor, Jalan Temenggung 13/9, Seksyen 9, Bandar Mahkota Cheras, 43200 Kuala Lumpur<br><br></li>            <li><a href="https://www.kindmeal.my/directory/49" class="blue"><b>Restaurant Sayur-Sayuran Fah Kong</b></a><br>10, Jalan Jejaka 7, Taman Maluri, Cheras, 55100, Kuala Lumpur<br><br></li>            <li><a href="https://www.kindmeal.my/directory/62" class="blue"><b>Shin Yu Japanese &amp; Chinese Vegetarian</b></a><br>269, Jalan Mahkota, Maluri, 55100 Kuala Lumpur<br><br></li>            <li><a href="https://www.kindmeal.my/directory/74" class="blue"><b>Sun Futt Sai Kai</b></a><br>39, Jalan Kancil, Off Jalan Pudu, 55100, Kuala Lumpur<br><br></li>            <li><a href="https://www.kindmeal.my/directory/101" class="blue"><b>Kaoyi Vegetarian Food Mart</b></a><br>16, Lorong Brunei 2, Jalan Pudu, Kuala Lumpur, 55100, Kuala Lumpur<br><br></li>
-            </ol></td>
-            </tr></tbody></table></div>
-    </div>
-   
-        <table border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="padding: 0px 10px;  border: 1px solid #dddddd; color: #333333; box-shadow: 0px 0px 6px #e0e0e0; font-size: 14px; border-radius: 10px; margin-top: 15px;  width: 100px;">
+      <div>
+        <div id="cont4"></div>
+        <div id="cont5">
+          <table
+            border="0"
+            class="deal_table"
+            cellspacing="0"
+            cellpadding="10"
+            style="
+              width: 800px;
+              min-height: 300px;
+              margin-bottom: 40px;
+              padding: 10px;
+              font-color: #666666;
+              font-size: 14px;
+            "
+          >
             <tbody>
-                <tr><td align="center"><a href="https://www.kindmeal.my/deals.htm" target="_blank" style="text-decoration: none;"><font style="font-size: 24px; color:#333333; ">Featured Deals</font></a></td></tr>
-            <tr><td xcolspan="2" xbgcolor="red">
-            <table border="0" width="100%" cellpadding="0" cellspacing="0" style="margin-top:10px;"><tbody><tr><td align="center" valign="top">                
-                <div class="imagecrop_200"><a href="/TaipingHometownVege/deal-719.htm" target="_blank"><img src="https://www.kindmeal.my/photos/deal/7/719-5142-m.jpg" class="imagecrop_source" onload="adjustImage(this, 200, 200);" border="0" title="Hearty Comfort Food - KindMeal.my" width="300" height="200" style="left: -50px; top: 0px; opacity: 1;"></a>
-                <div class="deal_off_red_small"><div style="margin-top:10px; padding-top:12px;">-15%</div></div></div>
-                <div style="height:10px;"></div>
-                <a href="/TaipingHometownVege/deal-719.htm" target="_blank" style="text-decoration: none;">Hearty Comfort Food, Taiping Hometown Vegetarian</a>
-                <br><br>                <div class="imagecrop_200"><a href="/Negative12Degrees/deal-704.htm" target="_blank"><img src="https://www.kindmeal.my/photos/deal/7/704-4734-m.jpg" class="imagecrop_source" onload="adjustImage(this, 200, 200);" border="0" title="Vegan Ice-Cream Indulgence - KindMeal.my" width="300" height="200" style="left: -50px; top: 0px; opacity: 1;"></a>
-                <div class="deal_off_red_small"><div style="margin-top:18px;padding-top:12px;">-15%</div></div></div>
-                <div style="height:10px;"></div>
-                <a href="/Negative12Degrees/deal-704.htm" target="_blank" style="text-decoration: none;">Vegan Ice-Cream Indulgence, Negative 12 Degrees</a>
-                <br><br>                <div class="imagecrop_200"><a href="/VgSeventeen/deal-618.htm" target="_blank"><img src="https://www.kindmeal.my/photos/deal/6/618-3514-m.jpg" class="imagecrop_source" onload="adjustImage(this, 200, 200);" border="0" title="Trendy Fusion Delights - KindMeal.my" width="300" height="200" style="left: -50px; top: 0px; opacity: 1;"></a>
-                <div class="deal_off_red_small"><div style="margin-top:18px;padding-top:12px;">-20%</div></div></div>
-                <div style="height:10px;"></div>
-                <a href="/VgSeventeen/deal-618.htm" target="_blank" style="text-decoration: none;">Trendy Fusion Delights, Vg Seventeen Cafe</a>
-                <br><br>                <div class="imagecrop_200"><a href="/HonestBakeryCafe/deal-621.htm" target="_blank"><img src="https://www.kindmeal.my/photos/deal/6/621-3576-m.jpg" class="imagecrop_source" onload="adjustImage(this, 200, 200);" border="0" title="Honestly Superb Meals - KindMeal.my" width="300" height="200" style="left: -50px; top: 0px; opacity: 1;"></a>
-                <div class="deal_off_red_small"><div style="margin-top:18px;padding-top:12px;">-20%</div></div></div>
-                <div style="height:10px;"></div>
-                <a href="/HonestBakeryCafe/deal-621.htm" target="_blank" style="text-decoration: none;">Honestly Superb Meals, Honest Bakery Cafe</a>
-                <br><br>                <div class="imagecrop_200"><a href="/BurgerOn16/deal-706.htm" target="_blank"><img src="https://www.kindmeal.my/photos/deal/7/706-4801-m.jpg" class="imagecrop_source" onload="adjustImage(this, 200, 200);" border="0" title="Creative Burgers &amp; Snacks - KindMeal.my" width="300" height="200" style="left: -50px; top: 0px; opacity: 1;"></a>
-                <div class="deal_off_red_small"><div style="margin-top:18px;padding-top:12px;">-10%</div></div></div>
-                <div style="height:10px;"></div>
-                <a href="/BurgerOn16/deal-706.htm" target="_blank" style="text-decoration: none;">Creative Burgers &amp; Snacks, Burger On 16</a>
-                <br><br></td></tr><tr><td align="center" style="font-size: 20px;"><a href="https://www.kindmeal.my/deals.htm" class="blue" target="_blank" style="text-decoration: none;color: rgb(26, 115, 232);">View More Deals »</a></td></tr></tbody></table></td></tr></tbody></table>
-    
-</div>
-    
-</body>
+              <tr>
+                <td width="50%" valign="top" class="deal_text">
+                  <div
+                    style="
+                      font-size: 26px;
+                      margin-bottom: 10px;
+                      color: #222222;
+                      text-align: left;
+                    "
+                  >
+                    Customers Also Like
+                  </div>
+                  <ol>
+                    <li>
+                      <a
+                        href="https://www.kindmeal.my/directory/872"
+                        class="blue"
+                        ><b>Newstart Health Kitchen</b></a
+                      ><br />1, Jalan 4/93, Taman Miharja, Jalan Cheras, 55200
+                      Kuala Lumpur<br /><br />
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.kindmeal.my/directory/20"
+                        class="blue"
+                        ><b>Choy Ma's Kitchen</b></a
+                      ><br />36 A Jalan Desa Bakti, Faber Plaza, Taman Desa (at
+                      Jalan Klang Lama), Kuala Lumpur, 58100<br /><br />
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.kindmeal.my/directory/21"
+                        class="blue"
+                        ><b>De Health Paradise Organic</b></a
+                      ><br />14-0 Ground Floor, Jalan 1/190E (at Desa Business
+                      Park), Kuala Lumpur, Malaysia<br /><br />
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.kindmeal.my/directory/176"
+                        class="blue"
+                        ><b>Lian Chi Vege Health Food Restaurant</b></a
+                      ><br />54, Jalan SS 23/11, Taman Sea, 47400 Petaling Jaya,
+                      Selangor<br /><br />
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.kindmeal.my/directory/193"
+                        class="blue"
+                        ><b>Love Health Vegetarian Restaurant</b></a
+                      ><br />No. 3 - 1, Dataran Sunway Kota Damansara, Jalan PJU
+                      5/9, Kota Damansara, 47810 Petaling Jaya, Selangor<br /><br />
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.kindmeal.my/directory/195"
+                        class="blue"
+                        ><b>Meng Tuck Health Food Centre</b></a
+                      ><br />133, Jln SS 2/6, Petaling Jaya, 47300<br /><br />
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.kindmeal.my/directory/209"
+                        class="blue"
+                        ><b>Niche Vege Kitchen 好地方素食馆</b></a
+                      ><br />19, Jalan 14/22, Seksyen 14, 46100 Petaling Jaya,
+                      Selangor<br /><br />
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.kindmeal.my/directory/329"
+                        class="blue"
+                        ><b>Chef Low Organic Kitchen</b></a
+                      ><br />Unit C-G-43, Blok Camilia, 10 Boulevard, Lebuhraya
+                      Sprint PJU6A, E23, 47400 Petaling Jaya<br /><br />
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.kindmeal.my/directory/331"
+                        class="blue"
+                        ><b>Eco Life Kitchen</b></a
+                      ><br />No. 40-4 (Level 4), Jalan Metro Pudu, Fraser
+                      Business Park, off Jalan Yew, 55100 Kuala Lumpur<br /><br />
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.kindmeal.my/directory/372"
+                        class="blue"
+                        ><b>Merryland Vegetarian Health Food</b></a
+                      ><br />46, Jalan Bakawali 48, Johor Jaya, 81100 Johor
+                      Bahru<br /><br />
+                    </li>
+                  </ol>
+                </td>
+                <td width="50%" valign="top" class="deal_text">
+                  <div
+                    style="
+                      font-size: 26px;
+                      margin-bottom: 10px;
+                      color: #222222;
+                      text-align: left;
+                    "
+                  >
+                    Nearby Restaurants
+                  </div>
+                  <ol>
+                    <li>
+                      <a
+                        href="https://www.kindmeal.my/directory/872"
+                        class="blue"
+                        ><b>Newstart Health Kitchen</b></a
+                      ><br />1, Jalan 4/93, Taman Miharja, Jalan Cheras, 55200
+                      Kuala Lumpur<br /><br />
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.kindmeal.my/directory/36"
+                        class="blue"
+                        ><b>Kechara Oasis (Viva Home)</b></a
+                      ><br />85, Jalan Loke Yew, Kuala Lumpur, 55200<br /><br />
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.kindmeal.my/directory/81"
+                        class="blue"
+                        ><b>Tian Yian Cafe</b></a
+                      ><br />5, Jalan 3/93, Taman Miharja, 55200 Kuala Lumpur,
+                      Wilayah Persekutuan Kuala Lumpur<br /><br />
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.kindmeal.my/directory/331"
+                        class="blue"
+                        ><b>Eco Life Kitchen</b></a
+                      ><br />No. 40-4 (Level 4), Jalan Metro Pudu, Fraser
+                      Business Park, off Jalan Yew, 55100 Kuala Lumpur<br /><br />
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.kindmeal.my/directory/848"
+                        class="blue"
+                        ><b>Rawsome (MyTown)</b></a
+                      ><br />Lot No. G-072, Ground Floor, MyTOWN Shopping
+                      Centre, No.6, Jalan Cochrane, 60000 Kuala Lumpur<br /><br />
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.kindmeal.my/directory/22"
+                        class="blue"
+                        ><b>Earth Kid Enterprise</b></a
+                      ><br />62A-1, 1st Floor, Jalan Temenggung 13/9, Seksyen 9,
+                      Bandar Mahkota Cheras, 43200 Kuala Lumpur<br /><br />
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.kindmeal.my/directory/49"
+                        class="blue"
+                        ><b>Restaurant Sayur-Sayuran Fah Kong</b></a
+                      ><br />10, Jalan Jejaka 7, Taman Maluri, Cheras, 55100,
+                      Kuala Lumpur<br /><br />
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.kindmeal.my/directory/62"
+                        class="blue"
+                        ><b>Shin Yu Japanese &amp; Chinese Vegetarian</b></a
+                      ><br />269, Jalan Mahkota, Maluri, 55100 Kuala Lumpur<br /><br />
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.kindmeal.my/directory/74"
+                        class="blue"
+                        ><b>Sun Futt Sai Kai</b></a
+                      ><br />39, Jalan Kancil, Off Jalan Pudu, 55100, Kuala
+                      Lumpur<br /><br />
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.kindmeal.my/directory/101"
+                        class="blue"
+                        ><b>Kaoyi Vegetarian Food Mart</b></a
+                      ><br />16, Lorong Brunei 2, Jalan Pudu, Kuala Lumpur,
+                      55100, Kuala Lumpur<br /><br />
+                    </li>
+                  </ol>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <table
+        border="0"
+        width="100%"
+        cellspacing="0"
+        cellpadding="0"
+        bgcolor="#ffffff"
+        style="
+          padding: 0px 10px;
+          border: 1px solid #dddddd;
+          color: #333333;
+          box-shadow: 0px 0px 6px #e0e0e0;
+          font-size: 14px;
+          border-radius: 10px;
+          margin-top: 15px;
+          width: 100px;
+        "
+      >
+        <tbody>
+          <tr>
+            <td align="center">
+              <a
+                href="https://www.kindmeal.my/deals.htm"
+                target="_blank"
+                style="text-decoration: none"
+                ><font style="font-size: 24px; color: #333333"
+                  >Featured Deals</font
+                ></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td xcolspan="2" xbgcolor="red">
+              <table
+                border="0"
+                width="100%"
+                cellpadding="0"
+                cellspacing="0"
+                style="margin-top: 10px"
+              >
+                <tbody>
+                  <tr>
+                    <td align="center" valign="top">
+                      <div class="imagecrop_200">
+                        <a
+                          href="/TaipingHometownVege/deal-719.htm"
+                          target="_blank"
+                          ><img
+                            src="https://www.kindmeal.my/photos/deal/7/719-5142-m.jpg"
+                            class="imagecrop_source"
+                            onload="adjustImage(this, 200, 200);"
+                            border="0"
+                            title="Hearty Comfort Food - KindMeal.my"
+                            width="300"
+                            height="200"
+                            style="left: -50px; top: 0px; opacity: 1"
+                        /></a>
+                        <div class="deal_off_red_small">
+                          <div style="margin-top: 10px; padding-top: 12px">
+                            -15%
+                          </div>
+                        </div>
+                      </div>
+                      <div style="height: 10px"></div>
+                      <a
+                        href="/TaipingHometownVege/deal-719.htm"
+                        target="_blank"
+                        style="text-decoration: none"
+                        >Hearty Comfort Food, Taiping Hometown Vegetarian</a
+                      >
+                      <br /><br />
+                      <div class="imagecrop_200">
+                        <a
+                          href="/Negative12Degrees/deal-704.htm"
+                          target="_blank"
+                          ><img
+                            src="https://www.kindmeal.my/photos/deal/7/704-4734-m.jpg"
+                            class="imagecrop_source"
+                            onload="adjustImage(this, 200, 200);"
+                            border="0"
+                            title="Vegan Ice-Cream Indulgence - KindMeal.my"
+                            width="300"
+                            height="200"
+                            style="left: -50px; top: 0px; opacity: 1"
+                        /></a>
+                        <div class="deal_off_red_small">
+                          <div style="margin-top: 18px; padding-top: 12px">
+                            -15%
+                          </div>
+                        </div>
+                      </div>
+                      <div style="height: 10px"></div>
+                      <a
+                        href="/Negative12Degrees/deal-704.htm"
+                        target="_blank"
+                        style="text-decoration: none"
+                        >Vegan Ice-Cream Indulgence, Negative 12 Degrees</a
+                      >
+                      <br /><br />
+                      <div class="imagecrop_200">
+                        <a href="/VgSeventeen/deal-618.htm" target="_blank"
+                          ><img
+                            src="https://www.kindmeal.my/photos/deal/6/618-3514-m.jpg"
+                            class="imagecrop_source"
+                            onload="adjustImage(this, 200, 200);"
+                            border="0"
+                            title="Trendy Fusion Delights - KindMeal.my"
+                            width="300"
+                            height="200"
+                            style="left: -50px; top: 0px; opacity: 1"
+                        /></a>
+                        <div class="deal_off_red_small">
+                          <div style="margin-top: 18px; padding-top: 12px">
+                            -20%
+                          </div>
+                        </div>
+                      </div>
+                      <div style="height: 10px"></div>
+                      <a
+                        href="/VgSeventeen/deal-618.htm"
+                        target="_blank"
+                        style="text-decoration: none"
+                        >Trendy Fusion Delights, Vg Seventeen Cafe</a
+                      >
+                      <br /><br />
+                      <div class="imagecrop_200">
+                        <a href="/HonestBakeryCafe/deal-621.htm" target="_blank"
+                          ><img
+                            src="https://www.kindmeal.my/photos/deal/6/621-3576-m.jpg"
+                            class="imagecrop_source"
+                            onload="adjustImage(this, 200, 200);"
+                            border="0"
+                            title="Honestly Superb Meals - KindMeal.my"
+                            width="300"
+                            height="200"
+                            style="left: -50px; top: 0px; opacity: 1"
+                        /></a>
+                        <div class="deal_off_red_small">
+                          <div style="margin-top: 18px; padding-top: 12px">
+                            -20%
+                          </div>
+                        </div>
+                      </div>
+                      <div style="height: 10px"></div>
+                      <a
+                        href="/HonestBakeryCafe/deal-621.htm"
+                        target="_blank"
+                        style="text-decoration: none"
+                        >Honestly Superb Meals, Honest Bakery Cafe</a
+                      >
+                      <br /><br />
+                      <div class="imagecrop_200">
+                        <a href="/BurgerOn16/deal-706.htm" target="_blank"
+                          ><img
+                            src="https://www.kindmeal.my/photos/deal/7/706-4801-m.jpg"
+                            class="imagecrop_source"
+                            onload="adjustImage(this, 200, 200);"
+                            border="0"
+                            title="Creative Burgers &amp; Snacks - KindMeal.my"
+                            width="300"
+                            height="200"
+                            style="left: -50px; top: 0px; opacity: 1"
+                        /></a>
+                        <div class="deal_off_red_small">
+                          <div style="margin-top: 18px; padding-top: 12px">
+                            -10%
+                          </div>
+                        </div>
+                      </div>
+                      <div style="height: 10px"></div>
+                      <a
+                        href="/BurgerOn16/deal-706.htm"
+                        target="_blank"
+                        style="text-decoration: none"
+                        >Creative Burgers &amp; Snacks, Burger On 16</a
+                      >
+                      <br /><br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="font-size: 20px">
+                      <a
+                        href="https://www.kindmeal.my/deals.htm"
+                        class="blue"
+                        target="_blank"
+                        style="text-decoration: none; color: rgb(26, 115, 232)"
+                        >View More Deals »</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
 </html>
 <script src="nearshops.js"></script>

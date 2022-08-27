@@ -442,3 +442,7 @@ padding: 8px 0;
     width: 100%;
     border-radius: 10px;
 }
+
+#shop{
+    cursor: pointer;
+}

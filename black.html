@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+
+     
+      #mai > div {
+        border-radius: 10px;
+      }
+      #mai > div > img {
+        height: 200px;
+      }
+      #topimg > img {
+        width: 100%;
+      }
+      #logo {
+        display: flex;
+      }
+      #logo1 {
+        display: flex;
+        margin-top: -20px;
+      }
+      #logo1 > h4 {
+        margin-right: 40px;
+        font-weight: 400;
+      }
+
+
+      #logo > div > img {
+        border: 2px solid white;
+        width: 50%;
+        position: relative;
+        bottom: 150px;
+        left: 220px;
+      }
+      #logo > div + div > h2 {
+        font-weight: 600;
+      }
+
+      #card0 {
+        display: flex;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        padding-bottom: 30px;
+      }
+      #card0 > div > img {
+        width: 600px;
+        height: 400px;
+      }
+      #card {
+        display: flex;
+        margin-left: 70px;
+        margin-top: 50px;
+      }
+      #card > div {
+        margin-right: 40px;
+      }
+      #card > div > h3 {
+        font-weight: 400;
+      }
+
+      #card > div + div {
+        line-height: 18px;
+      }
+
+      #card > div + div > h5 {
+        font-weight: 500;
+        color: rgb(92, 90, 90);
+      }
+
+      #card > div + div > button {
+        background-color: #f53838;
+        color: #dddddd;
+        border: 0px;
+        padding: 5px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 15px;
+      }
+      #card1 {
+        width: 75%;
+        margin: auto;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        padding-bottom: 20px;
+        margin-top: -120px;
+      }
+
+      #card2 {
+        margin-left: 20px;
+        margin-right: 25px;
+      }
+      #card2 > h2 {
+        font-weight: 400;
+      }
+      #card2 > p {
+        font-size: 14px;
+      }
+      #card4 {
+        display: flex;
+        margin: auto;
+        padding-left: 185px;
+      }
+
+      #detls {
+        display: flex;
+        width: 75%;
+        margin: auto;
+        margin-top: 40px;
+      }
+
+      #location > iframe {
+        height: 300px;
+      }
+      #location {
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        padding: 20px;
+        padding-top: 0px;
+        padding-bottom: 80px;
+        width: 25%;
+      }
+      #location > h3 {
+        background-color: rgba(3, 155, 229, 0.05);
+        padding: 10px 10px;
+        font-weight: 500;
+      }
+
+      #location > h4 {
+        font-weight: 500;
+      }
+
+      #location > h4 + p {
+        margin-top: -20px;
+      }
+      #commnt {
+        margin-left: 40px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      }
+
+      #commnt > h3 {
+        background-color: rgba(3, 155, 229, 0.05);
+        padding: 10px 10px;
+        font-weight: 500;
+      }
+      #prof {
+        display: flex;
+        margin-left: 20px;
+      }
+      #prof > img {
+        width: 80px;
+        height: 80px;
+        border-radius: 5px;
+      }
+      #name {
+        margin-top: -20px;
+        margin-left: 20px;
+      }
+      #name > h4 {
+        margin-top: -5px;
+        font-weight: 400;
+        font-size: 15px;
+      }
+      #nams {
+        display: flex;
+      }
+      #nams > h4 {
+        margin-right: 15px;
+        color: rgb(81, 80, 80);
+      }
+      #nams > h6 {
+        font-weight: 400;
+        margin-top: 26px;
+        color: gray;
+      }
+
+      #comm {
+        margin-left: 20px;
+        padding-right: 10px;
+        padding-bottom: 40px;
+      }
+      #comm > h3 {
+        margin-top: 30px;
+        margin-bottom: -10px;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="topimg">
+      <img src="https://www.kindmeal.my/photos/shop/3/335-c.jpg" alt="" />
+    </div>
+    <div id="logo">
+      <div>
+        <img
+          src="https://www.kindmeal.my/photos/shop/3/335-2150-m.jpg"
+          alt=""
+        />
+      </div>
+      <div>
+        <h2>The Black Cat Cafe</h2>
+        <div id="logo1">
+          <h4
+            style="border-bottom: 2px solid #04be5a; padding-bottom: 5px; cursor: pointer;"
+            onclick="func0()"
+            id="ov"
+           >
+            Overview
+          </h4>
+          <h4 onclick="func()" id="md" style="cursor: pointer;">Meal Deals</h4>
+          <h4 id="fm" onclick="func1()" style="cursor: pointer;">Food Menu</h4>
+          <h4 id="lct" onclick="func2()" style="cursor: pointer;">Location</h4>
+        </div>
+      </div>
+    </div>
+    <div id="mai">
+      <div id="card1">
+        <div id="card0">
+          <div>
+            <img
+              src="https://www.kindmeal.my/photos/shop/3/335-2175-l.jpg"
+              alt=""
+            />
+          </div>
+          <div id="card">
+            <div>
+              <h3>Food Type</h3>
+              <h3>Environment</h3>
+              <h3>Website</h3>
+              <h3>Meal Deals</h3>
+              <h3>Food Menu</h3>
+              <h3>Outlets</h3>
+            </div>
+            <div>
+              <h5>Vegetarian — Fusion Cuisine</h5>
+              <h5>Air-Conditioned, Free Wifi</h5>
+              <h5>
+                <a
+                  href="https://www.facebook.com/The-Black-Cat-Café-457368587767911"
+                  >https://www.facebook.com/The-Black-Cat-Café-457368587767911</a
+                >
+              </h5>
+              <h5>None</h5>
+              <h5>24 Sizzling Items</h5>
+              <h5>1 Location -- Kuala Lumpur</h5>
+              <button>Contact Shop</button>
+            </div>
+          </div>
+        </div>
+        <div id="card2">
+          <h2>Welcome To The Black Cat Cafe</h2>
+          <p>
+            Black Cat Cafe offers flavors from around the world, natural,
+            healthy and fresh. Breads, pizza dough, pasta are handmade by our
+            accomplished chef from Canada. We serve a variety of egg- free home
+            made cakes and pastries.
+          </p>
+
+          <p>
+            Ambience is warm and homely surrounded by books, art pieces and
+            musical instruments. We strive to keep our prices affordable to
+            enable people to appreciate vegetarian food and in the process hope
+            to save some animals
+          </p>
+        </div>
+      </div>
+      <div id="card4">
+        <div>
+          <table
+            border="0"
+            width="100%"
+            height="325"
+            cellspacing="0"
+            cellpadding="0"
+            bgcolor="#ffffff"
+            style="
+              padding: 15px;
+              margin-top: 40px;
+              border: 1px solid #dddddd;
+              color: #333333;
+              box-shadow: 0px 0px 6px #e0e0e0;
+              font-size: 14px;
+              width: 50px;
+            "
+          >
+            <tbody>
+              <tr>
+                <td align="center" valign="top">
+                  &nbsp;
+                  <font style="font-size: 24px"
+                    >Meal Deals <font color="#999999">(0)</font></font
+                  >
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td colspan="2" xbgcolor="red" valign="top">
+                  <table
+                    border="0"
+                    width="100%"
+                    height="245"
+                    cellpadding="0"
+                    cellspacing="0"
+                    style="margin-top: 10px"
+                  >
+                    <tbody>
+                      <tr>
+                        <td width="210" align="center" valign="top">
+                          <div class="imagecrop_200">
+                            <a
+                              style="text-decoration: none"
+                              href="https://kindMeal.my/BlackCatCafe/deal-457.htm"
+                              ><img
+                                src="https://www.kindmeal.my/photos/deal/4/457-2109-m.jpg"
+                                class="imagecrop_source"
+                                onload="adjustImage(this, 200, 200);"
+                                border="0"
+                                title="Flavours Around the World - The Black Cat Cafe"
+                                width="235"
+                                height="200"
+                                style="left: -50px; top: 0px; opacity: 1"
+                            /></a>
+                          </div>
+                          <div style="height: 10px"></div>
+                          <a
+                            style="text-decoration: none"
+                            href="https://kindMeal.my/BlackCatCafe/deal-457.htm"
+                            target="_blank"
+                            >Flavours Around the World</a
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <table
+            border="0"
+            width="100%"
+            height="325"
+            cellspacing="0"
+            cellpadding="0"
+            bgcolor="#ffffff"
+            style="
+              padding: 15px;
+              margin-top: 40px;
+              border: 1px solid #dddddd;
+              color: #333333;
+              box-shadow: 0px 0px 6px #e0e0e0;
+              font-size: 14px;
+              width: 120px;
+            "
+          >
+            <tbody>
+              <tr height="30">
+                <td align="left" valign="top">
+                  &nbsp;
+                  <font style="font-size: 24px"
+                    >Yummy Food <font color="#999999">(24)</font></font
+                  >
+                </td>
+                <td
+                  width="200"
+                  align="right"
+                  style="font-size: 20px"
+                  xvalign="top"
+                >
+                  <a
+                    style="text-decoration: none"
+                    href="https://KindMeal.my/BlackCatCafe/menu.htm"
+                    class="blue"
+                    >View Menu »</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" height="245" xbgcolor="yellow" valign="top">
+                  <table
+                    border="0"
+                    width="100%"
+                    cellpadding="0"
+                    cellspacing="0"
+                    style="margin-top: 10px"
+                  >
+                    <tbody>
+                      <tr>
+                        <td width="210" align="center" valign="top">
+                          <div class="imagecrop_200">
+                            <a
+                              style="text-decoration: none"
+                              href="https://KindMeal.my/BlackCatCafe/menuitem-4322.htm"
+                              ><img
+                                src="https://www.kindmeal.my/photos/item/0/335-4322-m.jpg"
+                                class="imagecrop_source"
+                                onload="adjustImage(this, 200, 200);"
+                                border="0"
+                                title="Nasi Lemak - The Black Cat Cafe"
+                                width="200"
+                                height="210"
+                                style="left: 0px; top: 0px; opacity: 1"
+                            /></a>
+                          </div>
+                          <div style="height: 10px"></div>
+                          <a
+                            style="text-decoration: none; color: #333333"
+                            href="https://KindMeal.my/BlackCatCafe/menuitem-4322.htm"
+                            target="_blank"
+                            >Nasi Lemak</a
+                          >
+                        </td>
+                        <td width="210" align="center" valign="top">
+                          <div class="imagecrop_200">
+                            <a
+                              href="https://KindMeal.my/BlackCatCafe/menuitem-3868.htm"
+                              ><img
+                                src="https://www.kindmeal.my/photos/item/0/335-3868-m.jpg"
+                                class="imagecrop_source"
+                                onload="adjustImage(this, 200, 200);"
+                                border="0"
+                                title="Raw Burrito with a Side of Salsa &amp; Cauliflower Rice - The Black Cat Cafe"
+                                width="210"
+                                height="200"
+                                style="left: 0px; top: 0px; opacity: 1"
+                            /></a>
+                          </div>
+                          <div style="height: 10px"></div>
+                          <a
+                            style="text-decoration: none; color: #333333"
+                            href="https://KindMeal.my/BlackCatCafe/menuitem-3868.htm"
+                            target="_blank"
+                            >Raw Burrito with a Side of Salsa &amp; Cauli..</a
+                          >
+                        </td>
+                        <td width="210" align="center" valign="top">
+                          <div class="imagecrop_200">
+                            <a
+                              href="https://KindMeal.my/BlackCatCafe/menuitem-4294.htm"
+                              ><img
+                                src="https://www.kindmeal.my/photos/item/0/335-4294-m.jpg"
+                                class="imagecrop_source"
+                                onload="adjustImage(this, 200, 200);"
+                                border="0"
+                                title="Pie - The Black Cat Cafe"
+                                width="210"
+                                height="200"
+                                style="left: -67px; top: 0px; opacity: 1"
+                            /></a>
+                          </div>
+                          <div style="height: 10px"></div>
+                          <a
+                            style="text-decoration: none; color: #333333"
+                            href="https://KindMeal.my/BlackCatCafe/menuitem-4294.htm"
+                            target="_blank"
+                            >Pie</a
+                          >
+                        </td>
+                        <td width="210" align="center" valign="top">
+                          <div class="imagecrop_200">
+                            <a
+                              href="https://KindMeal.my/BlackCatCafe/menuitem-4321.htm"
+                              ><img
+                                src="https://www.kindmeal.my/photos/item/0/335-4321-m.jpg"
+                                class="imagecrop_source"
+                                onload="adjustImage(this, 200, 200);"
+                                border="0"
+                                title="Macarons - The Black Cat Cafe"
+                                width="210"
+                                height="200"
+                                style="left: -34px; top: 0px; opacity: 1"
+                            /></a>
+                          </div>
+                          <div style="height: 10px"></div>
+                          <a
+                            style="text-decoration: none; color: #333333"
+                            href="https://KindMeal.my/BlackCatCafe/menuitem-4321.htm"
+                            target="_blank"
+                            >Macarons</a
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="detls">
+        <div id="location">
+          <h3>Location</h3>
+          <h4>The Black Cat Cafe</h4>
+          <p>
+            B-00-11 Viva Residency, Jalan Suppiah Pillay, 2nd mile Jalan Ipoh,
+            51200 Kuala Lumpur, Wilayah Persekutuan
+          </p>
+          <p>Opens: Mon - Sat: 11am - 9.30pm; Sun: Closed</p>
+          <p>Tel: 03-4050 2822 / 016-419 1309</p>
+          <iframe
+            src="https://maps.google.com/maps?q=The%20Black%20Cat%20Cafe&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            style="width: 100%"
+          ></iframe>
+        </div>
+        <div>
+          <div id="commnt">
+            <h3>Comments(1)</h3>
+            <div id="prof">
+              <img
+                src="https://www.kindmeal.my/photos/member/30/30127-s.jpg"
+                alt=""
+              />
+              <div id="name">
+                <div id="nams">
+                  <h4>Marziha Zaini</h4>
+                  <h6>Sep 30th 2017 at 10:50AM</h6>
+                </div>
+                <h4>
+                  The place is very nice and i like it . But i want know this
+                  restaurant is HALAL for people muslim ?
+                </h4>
+              </div>
+            </div>
+            <div id="comm">
+              <h3>Share Comments & Feedback</h3>
+              <p>
+                Have any comments, enquiries or suggestions regarding The Black
+                Cat Cafe and their offerings? Post them here to share and
+                discuss.
+              </p>
+            </div>
+          </div>
+          <div id="momnts">
+            <table
+              border="0"
+              width="810"
+              align="right"
+              height="250"
+              cellspacing="0"
+              cellpadding="0"
+              bgcolor="#ffffff"
+              xstyle="border-bottom: 1px solid #dddddd; padding-bottom: 25px;"
+              style="
+                padding: 15px;
+                margin-top: 40px;
+                border: 1px solid #dddddd;
+                color: #333333;
+                box-shadow: 0px 0px 6px #e0e0e0;
+                font-size: 14px;
+              "
+            >
+              <tbody>
+                <tr height="30">
+                  <td width="50%" valign="top">
+                    &nbsp;
+                    <font style="font-size: 24px"
+                      >Customer KindMoments
+                      <font color="#999999">(34)</font></font
+                    >
+                  </td>
+                  <td align="right" style="font-size: 20px" xvalign="top">
+                    <a
+                      href="https://www.kindmeal.my/moments.htm?action=shop&amp;shopid=335"
+                      class="blue"
+                      target="_blank"
+                      style="color: black; text-decoration: none"
+                      >View All KindMoments »</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" height="200" gcolor="yellow" valign="top">
+                    <table
+                      border="0"
+                      width="100%"
+                      cellpadding="0"
+                      cellspacing="0"
+                      style="margin-top: 10px"
+                    >
+                      <tbody>
+                        <tr>
+                          <td width="190" align="center" valign="top">
+                            <div
+                              class="imagecrop_150"
+                              style="border-radius: 3px"
+                            >
+                              <a
+                                href="https://www.kindmeal.my/AmbikaMenon/moment-12081.htm"
+                                target="_blank"
+                                ><img
+                                  src="https://www.kindmeal.my/photos/moment/12/12081-15056-s.jpg"
+                                  class="imagecrop_source"
+                                  onload="adjustImage(this, 150, 150);"
+                                  border="0"
+                                  title="Freshly baked eggless butter cake and eggless butterscotch c.."
+                                  width="150"
+                                  height="150"
+                                  style="left: 0px; top: -25px; opacity: 1"
+                              /></a>
+                            </div>
+                            <div style="height: 10px"></div>
+                            <div
+                              style="
+                                width: 170px;
+                                word-break: break-word;
+                                font-size: 12px;
+                              "
+                            >
+                              <a
+                                href="https://www.kindmeal.my/AmbikaMenon/moment-12081.htm"
+                                target="_blank"
+                                style="color: black; text-decoration: none"
+                                ><b style="color: black; text-decoration: none"
+                                  >AmbikaMenon:</b
+                                >
+                                "Freshly baked eggless butter cake and eggless
+                                butterscotch c.."</a
+                              >
+                            </div>
+                          </td>
+                          <td width="190" align="center" valign="top">
+                            <div
+                              class="imagecrop_150"
+                              style="border-radius: 3px"
+                            >
+                              <a
+                                href="https://www.kindmeal.my/FatJedi/moment-12619.htm"
+                                target="_blank"
+                                ><img
+                                  src="https://www.kindmeal.my/photos/moment/12/12619-16152-s.jpg"
+                                  class="imagecrop_source"
+                                  onload="adjustImage(this, 150, 150);"
+                                  border="0"
+                                  title="Curry noddles with delicious soup! Its style is different fr.."
+                                  width="150"
+                                  height="150"
+                                  style="left: 0px; top: -25px; opacity: 1"
+                              /></a>
+                            </div>
+                            <div style="height: 10px"></div>
+                            <div
+                              style="
+                                width: 170px;
+                                word-break: break-word;
+                                font-size: 12px;
+                              "
+                            >
+                              <a
+                                href="https://www.kindmeal.my/FatJedi/moment-12619.htm"
+                                target="_blank"
+                                style="color: black; text-decoration: none"
+                                ><b style="color: black; text-decoration: none"
+                                  >FatJedi:</b
+                                >
+                                "Curry noddles with delicious soup! Its style is
+                                different fr.."</a
+                              >
+                            </div>
+                          </td>
+                          <td width="190" align="center" valign="top">
+                            <div
+                              class="imagecrop_150"
+                              style="border-radius: 3px"
+                            >
+                              <a
+                                href="https://www.kindmeal.my/jiaying_23/moment-12690.htm"
+                                target="_blank"
+                                ><img
+                                  src="https://www.kindmeal.my/photos/moment/12/12690-16328-s.jpg"
+                                  class="imagecrop_source"
+                                  onload="adjustImage(this, 150, 150);"
+                                  border="0"
+                                  title="Yummy tofu burger with salty tofu patty and cheese!!"
+                                  width="200"
+                                  height="150"
+                                  style="left: -25px; top: 0px; opacity: 1"
+                              /></a>
+                            </div>
+                            <div style="height: 10px"></div>
+                            <div
+                              style="
+                                width: 170px;
+                                word-break: break-word;
+                                font-size: 12px;
+                              "
+                            >
+                              <a
+                                href="https://www.kindmeal.my/jiaying_23/moment-12690.htm"
+                                target="_blank"
+                                style="color: black; text-decoration: none"
+                                ><b style="color: black; text-decoration: none"
+                                  >jiaying_23:</b
+                                >
+                                "Yummy tofu burger with salty tofu patty and
+                                cheese!!"</a
+                              >
+                            </div>
+                          </td>
+                          <td width="190" align="center" valign="top">
+                            <div
+                              class="imagecrop_150"
+                              style="border-radius: 3px"
+                            >
+                              <a
+                                href="https://www.kindmeal.my/PiggyLovesToEat/moment-9405.htm"
+                                target="_blank"
+                                ><img
+                                  src="https://www.kindmeal.my/photos/moment/9/9405-9426-s.jpg"
+                                  class="imagecrop_source"
+                                  onload="adjustImage(this, 150, 150);"
+                                  border="0"
+                                  title="Who likes guacamole and salsa? 🙋 Tacos - set of 2, topped up.."
+                                  width="150"
+                                  height="150"
+                                  style="left: 0px; top: 0px; opacity: 1"
+                              /></a>
+                            </div>
+                            <div style="height: 10px"></div>
+                            <div
+                              style="
+                                width: 170px;
+                                word-break: break-word;
+                                font-size: 12px;
+                              "
+                            >
+                              <a
+                                href="https://www.kindmeal.my/PiggyLovesToEat/moment-9405.htm"
+                                target="_blank"
+                                style="color: black; text-decoration: none"
+                                ><b style="color: black; text-decoration: none"
+                                  >PiggyLovesToEat:</b
+                                >
+                                "Who likes guacamole and salsa? 🙋 Tacos - set
+                                of 2, topped up.."</a
+                              >
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="black.js"></script>

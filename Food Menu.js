@@ -164,9 +164,7 @@ let showButns1=(results,per_page)=>{
 }
 showButns1(results,per_page)
 
-// let pagination=(page_no)=>{
 
-// }
 
 
 
@@ -368,14 +366,19 @@ function di(){
     buttn1.style.border="0"
     buttn1.style.padding="5px 0"
     buttn1.style.borderRadius="5px"
+    buttn1.style.cursor="pointer"
+    buttn1.addEventListener("click",function(){
+        linkd()
+    })
 
     let buttn2=document.createElement("button")
     buttn2.innerText="Food Menu"
     buttn2.style.border="0"
     buttn2.style.padding="5px 0"
     buttn2.style.borderRadius="5px"
+    buttn2.style.cursor="pointer"
     buttn2.addEventListener("click",function(){
-        window.location.href="The Black Cat Cafe .html"
+        linkd()
     })
 
     let buttn3=document.createElement("button")
@@ -383,11 +386,22 @@ function di(){
     buttn3.style.border="0"
     buttn3.style.padding="5px 0"
     buttn3.style.borderRadius="5px"
+    buttn3.style.cursor="pointer"
+    buttn3.addEventListener("click",function(){
+        linkd()
+    })
 
     div3.append(buttn1,buttn2,buttn3)
     div2.append(image2,name,ph,phone,add,address,oh,hours,div3)
     document.getElementById("cont6").append(div2)
 
+}
+
+
+
+
+function linkd(){
+    window.location.href="black.html"
 }
 
 
