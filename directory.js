@@ -220,7 +220,7 @@ Data.map(function(ele){
 
     let visit=document.createElement("a")
     visit.innerText="Visit Website"
-    visit.href='https://www.kindmeal.my/Aenon'
+    visit.href='Aenon.html'
     visit.id="visit"
 
     let directions =document.createElement("a")
@@ -230,7 +230,7 @@ Data.map(function(ele){
 
      let nearby=document.createElement("a")
      nearby.innerText="Nearby Shops"
-     nearby.href=""
+     nearby.href="nearshops.html"
      nearby.id="nearby"
 
 
@@ -242,6 +242,8 @@ Data.map(function(ele){
 })   
 
 }
+
+
 
 
 
@@ -270,8 +272,9 @@ let func1=()=>{
 
 function func(){
     let buttons_div1=document.getElementById("buttonss")
+    let buttons_div2=document.getElementById("buttonss1")
     let value = document.getElementById("search").value;
-    
+    let cont=document.getElementById("cont")
     let Data1 = Data;
 
     if(value == ""){
@@ -283,6 +286,8 @@ function func(){
         return ele.Name == value
     })
     buttons_div1.style.display="none";
+    buttons_div2.style.display="none";
+    cont.style.marginTop="50px"
     display(New_Data)
 
 }
