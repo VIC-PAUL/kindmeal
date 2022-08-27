@@ -120,6 +120,7 @@ let func=()=>{
     mai.style.width='20%';
     mai.style.margin="auto";
     mai.style.display="block"
+    mai.style.marginBottom='80px'
     
 
 
@@ -290,7 +291,7 @@ function func2(){
     a.innerText="View Full Location Map »"
     a.href="https://maps.google.com/?q=Purple+Cane+Tea+Cuisine+%E7%B4%AB%E8%97%A4%E8%8C%B6%E5%8E%9F@3.1398398631077170,101.7122398316860200"
     a.style.textDecoration="none"
-    
+    a.style.color="blue"
     
     let div=document.createElement("div")
     div.style.display="flex"

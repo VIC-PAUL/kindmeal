@@ -66,7 +66,7 @@ function display(arr) {
 
   let deals = document.createElement("a");
   deals.innerText = "Get KindMeal Deals";
-  deals.href = "";
+  deals.href = "Aenon.html";
   deals.style.textDecoration = "none";
   deals.style.backgroundColor = "#f53838";
   deals.style.color = "white";

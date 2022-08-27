@@ -120,6 +120,7 @@ let func=()=>{
     mai.style.width='20%';
     mai.style.margin="auto";
     mai.style.display="block"
+    mai.style.marginBottom='80px'
     
 
 
@@ -290,6 +291,7 @@ function func2(){
     a.innerText="View Full Location Map »"
     a.href="https://www.google.com/maps?ll=3.122992,101.721118&z=13&t=m&hl=en-US&gl=US&mapclient=embed&cid=436133840961807936"
     a.style.textDecoration="none"
+    a.style.color="blue"
     
     
     let div=document.createElement("div")
