@@ -120,6 +120,7 @@ let func=()=>{
     mai.style.width='20%';
     mai.style.margin="auto";
     mai.style.display="block"
+    mai.style.marginBottom='80px'
 
     let ov= document.getElementById("ov")
     ov.style.borderBottom= "0px solid rgb(181, 177, 177)"
@@ -289,6 +290,7 @@ function func2(){
     a.innerText="View Full Location Map »"
     a.href="https://www.google.com/maps?q=The+Black+Cat+Cafe@3.1777466000000000,101.6850911999999900"
     a.style.textDecoration="none"
+    a.style.color="blue"
     
     
     let div=document.createElement("div")

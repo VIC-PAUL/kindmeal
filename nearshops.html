@@ -6,8 +6,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="directory.css" />
+    <style>
+       #nav-1 {
+        width: 88%;
+        margin: auto;
+        display: flex;
+        /* border: 1px solid red; */
+      }
+
+      #nav1-child-1 {
+        margin-left: 50px;
+      }
+
+      #nav1-child-2 {
+        width: 16%;
+        height: 60px;
+        margin-left: 12%;
+        margin-top: 10px;
+      }
+
+      #nav1-child-2 img {
+        width: 20%;
+        margin-left: 12px;
+        margin-top: 7%;
+      }
+
+      #nav1-child-3 {
+        display: flex;
+        gap: 10px;
+        margin-left: 9%;
+        align-items: center;
+      }
+
+      #nav1-child-3 p {
+        font-size: 12px;
+      }
+
+      #nav1-child-3 h4,
+      a {
+        font-size: 14px;
+        text-decoration: none;
+        color: white;
+      }
+
+      #facebook {
+        width: 80px;
+        height: 20px;
+        line-height: 20px;
+        padding: 0px 2px 2px 2px;
+        background-color: #35619f;
+        font-weight: bold;
+        font-size: 13px;
+        text-align: center;
+        border-radius: 5px;
+      }
+
+      #email {
+        width: 80px;
+        height: 20px;
+        line-height: 20px;
+        padding: 0px 2px 2px 2px;
+        background-color: #666666;
+        font-weight: bold;
+        font-size: 13px;
+        text-align: center;
+        border-radius: 5px;
+      }
+
+      #nav-2 {
+        background-color: #2bb673;
+        height: auto;
+        width: 100%;
+      }
+
+      #nav-2 > div {
+        width: 74%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #nav-2 > div a {
+        font-size: 18px;
+        line-height: 40px;
+        color: white;
+      }
+
+      #signup {
+        border-left: 1px solid rgb(198, 196, 196);
+        padding: 5px;
+      }
+
+      #footer {
+        background-color: #2bb673;
+        height: auto;
+        width: 100%;
+        padding: 30px;
+      }
+
+      #footer > div:nth-child(1) {
+        width: 75%;
+        height: auto;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      #footer > div > div > a {
+        text-decoration: none;
+        display: block;
+        line-height: 1.5;
+        font-weight: normal;
+        color: #eeeeee;
+        font-size: 13px;
+      }
+
+      .fot-head {
+        font-size: 16px;
+        color: white;
+        font-weight: bolder;
+        margin-bottom: 10px;
+      }
+
+      #fot-para {
+        margin: auto;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      #fot-para > p {
+        text-align: center;
+        color: #eeeeee;
+        font-size: 10px;
+        background-color: #2bb673;
+        line-height: 1.5;
+      }
+    </style>
   </head>
   <body>
+    <div id="navbar"></div>
     <div id="Dir_top">
       <h2>Vegetarian Restaurants In Malaysia</h2>
       <h5>
@@ -268,7 +405,7 @@
         cellpadding="0"
         bgcolor="#ffffff"
         style="
-          padding: 0px 10px;
+          padding: 15px 10px;
           border: 1px solid #dddddd;
           color: #333333;
           box-shadow: 0px 0px 6px #e0e0e0;
@@ -276,6 +413,8 @@
           border-radius: 10px;
           margin-top: 15px;
           width: 100px;
+          height: 200px;
+          margin-bottom: 50px;
         "
       >
         <tbody>
@@ -284,7 +423,7 @@
               <a
                 href="https://www.kindmeal.my/deals.htm"
                 target="_blank"
-                style="text-decoration: none"
+                style="text-decoration: none;"
                 ><font style="font-size: 24px; color: #333333"
                   >Featured Deals</font
                 ></a
@@ -315,7 +454,7 @@
                             title="Hearty Comfort Food - KindMeal.my"
                             width="300"
                             height="200"
-                            style="left: -50px; top: 0px; opacity: 1"
+                            style="left: -50px; top: 0px; opacity: 1;"
                         /></a>
                         <div class="deal_off_red_small">
                           <div style="margin-top: 10px; padding-top: 12px">
@@ -323,7 +462,7 @@
                           </div>
                         </div>
                       </div>
-                      <div style="height: 10px"></div>
+                      <div style="height: 10px;margin-top: -60px;"></div>
                       <a
                         href="/TaipingHometownVege/deal-719.htm"
                         target="_blank"
@@ -351,7 +490,7 @@
                           </div>
                         </div>
                       </div>
-                      <div style="height: 10px"></div>
+                      <div style="height: 10px;margin-top: -60px;"></div>
                       <a
                         href="/Negative12Degrees/deal-704.htm"
                         target="_blank"
@@ -377,7 +516,7 @@
                           </div>
                         </div>
                       </div>
-                      <div style="height: 10px"></div>
+                      <div style="height: 10px;margin-top: -60px;"></div>
                       <a
                         href="/VgSeventeen/deal-618.htm"
                         target="_blank"
@@ -403,7 +542,7 @@
                           </div>
                         </div>
                       </div>
-                      <div style="height: 10px"></div>
+                      <div style="height: 10px;margin-top: -60px;"></div>
                       <a
                         href="/HonestBakeryCafe/deal-621.htm"
                         target="_blank"
@@ -429,7 +568,7 @@
                           </div>
                         </div>
                       </div>
-                      <div style="height: 10px"></div>
+                      <div style="height: 10px;margin-top: -60px;"></div>
                       <a
                         href="/BurgerOn16/deal-706.htm"
                         target="_blank"
@@ -458,5 +597,15 @@
       </table>
     </div>
   </body>
+  <div id="footer"></div>
 </html>
+<script type="module">
+  let navbar = document.getElementById("navbar");
+  import DishplayNavbar from "./components/navbar.js";
+  navbar.innerHTML = DishplayNavbar();
+
+  let footer = document.getElementById("footer");
+  import dishplayFooter from "./components/footer.js";
+  footer.innerHTML = dishplayFooter();
+</script>
 <script src="nearshops.js"></script>
