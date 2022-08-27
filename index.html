@@ -8,7 +8,7 @@
     <title>Delicious Meat-Free Meals, Vegetarian Cuisines, Kind Meal Discount Coupons for Restaurants & Cafes in
         Malaysia | KindMeal.my</title>
     <link rel="icon" type="image/png" href="https://i.ibb.co/LZpBhMB/unnamed-removebg-preview.png">
-
+    <link rel="stylesheet" href="styles/modal.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/index.css">
@@ -27,7 +27,9 @@
       <p style="font-size: 14px; margin-top: 10px; margin-bottom: 40px">
         Please select the type of membership to proceed
       </p>
-      <div class="foodLover modalChild">
+      <div onclick="(function dis(){
+        window.location.href = 'join.html'
+      })()" class="foodLover modalChild">
         <img
           class="img_1"
           src="https://www.kindmeal.my/images/join_normal.png"
@@ -57,7 +59,7 @@
         </div>
       </div>
       <div class="bottomText">
-        <a href="#">Member Login</a>
+        <a href="#" onclick="loginRedirect()">Member Login</a>
         <a href="#">Forgot Password ?</a>
       </div>
     </div>
@@ -68,7 +70,7 @@
       <div class="loginInput">
         <input type="email" id="login_email" placeholder="Your Email" />
         <input type="password" id="login_password" placeholder="Your Password" />
-        <button id="sumbit_login">Login</button>
+        <button onclick="do_login()" id="sumbit_login">Login</button>
       </div>
       <hr />
       <div class="loginWithFb">
@@ -81,7 +83,7 @@
       </div>
       <div class="bottomText">
         <a href="#">Forgot Password ?</a>
-        <a href="#">Not a member? Sign up FREE!</a>
+        <a href="#" onclick="signupRedirect()">Not a member? Sign up FREE!</a>
       </div>
     </div>
     <div id="container1">
@@ -320,3 +322,5 @@
     footer.innerHTML = dishplayFooter()
 </script>
 <script src="./scripts/index.js"></script>
+<script src="./scripts/modal.js"></script>
+<script src="./scripts/login.js"></script>
