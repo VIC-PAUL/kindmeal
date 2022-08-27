@@ -77,13 +77,14 @@ gap: 20px;
     
 }
 .button_red{
+    margin-top: 20px;
     background-color: #f53838;
 width: 70%;
 height: 30px;
-font-weight: 200;
-text-align: center;
 color: #ffffff;
 font-size: 16px;
+padding-top: 5px;
+
 border-radius: 6px;}
 #fst{
     margin-top: 20px;
@@ -125,6 +126,15 @@ border-radius: 6px;}
     
    
 }
+#desc_div{
+    margin: 2%;
+    font-size: 14px;
+}
+#desc_div :nth-child(2){
+color: blue;
+text-underline-position: below;
+
+}
 #filter{
     margin-top: 50px;
     display: flex;
@@ -133,7 +143,8 @@ border-radius: 6px;}
 #pagination{
 display: flex;
 justify-content: space-between;
-
+margin-top: 20px;
+margin-bottom: 20px;
 }
 #page{
     display: flex;
@@ -150,6 +161,7 @@ justify-content: space-between;
     height: 50px;
     width: 50px;
     border-radius: 50%;
+    border: none;
     
 }
 #top{
@@ -167,6 +179,7 @@ justify-content: space-between;
 #top1_div{
 display: flex;   
 margin: 4px;
+
 }
 #top_div{
     display: flex;
@@ -197,12 +210,12 @@ margin: 4px;
     background-color:  #f53838 ;
 }
 #imgnext_div{
-    gap: px;
+    gap:5 px;
     /* border: 1px solid black; */
   
-    grid-template-columns: repeat(6,1fr);
-    margin-left: 25%;
-    margin-right: 30%;
+    grid-template-columns: repeat(3,1fr);
+    margin-left: 24%;
+    margin-right: 25%;
 }
 #imgnext_div>img{
     height: 20px;
@@ -229,4 +242,24 @@ margin: 4px;
     height: 30px;
     margin-top: 10px;
     
+}
+#bottom_div{
+    display: flex;
+    border-top: 1px solid #d8d8d8;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+#bottom_div :nth-child(2){
+    margin-left: 3%;
+    color: #444444;
+
+}
+#bottom2_div>a{
+    color: #444444;
+    font-size: 16px;
+    margin-left: 3%;
+}
+#bottom2_div>p{
+    color: #444444;
+    font-size: 13px;
 }
