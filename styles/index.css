@@ -280,3 +280,10 @@
     width: 339%;
   }
 }
+.isLoggedIn{
+  display: none;
+  align-items: center;
+  width: 200px;
+  justify-content: space-between;
+  margin-left: 250px;
+}

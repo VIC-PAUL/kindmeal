@@ -65,7 +65,65 @@
         margin-left: 2px;
       }
       .blue {
-        color: var(--link-color)
+        color: var(--link-color);
+      }
+      .input-01 {
+        display: flex;
+        align-items: center;
+      }
+      .input-01 .placeholder {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid red;
+      }
+      .small-gray {
+        color: #888888;
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+      .label-gray {
+        color: #444444;
+        font-size: 15px;
+      }
+      .button_red {
+        font-family: "Roboto", Arial;
+        width: 150px;
+        line-height: 19px;
+        background-color: #f53838;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 6px;
+        padding: 10px 35px;
+        margin-top: -20px;
+        margin-bottom: 100px;
+      }
+      .button_red:hover {
+        background-color: #d41f1f;
+        cursor: pointer;
+      }
+      .right-div {
+        margin-left: 50px;
+        margin-top: 50px;
+      }
+      tr {
+        margin-top: 70px;
+      }
+      select {
+        border: 1px solid #dddddd;
+        border-radius: 5px;
+        padding: 5px 0px 5px 5px;
+        font-size: 16px;
+        color: #666666;
+      }
+      input {
+        padding: 10px 25px;
+        border: 1px solid #dddddd;
+        border-radius: 5px;
+        color: #666666;
+        font-size: 16px;
+      }
+      .ww_form_content {
       }
     </style>
   </head>
@@ -101,11 +159,782 @@
       <div class="right-div">
         <h1 style="font-weight: 500">
           Food Lover? Sign Up Now or
-          <a href="" class="blue"><h1 style="font-weight: 500;display: inline;">Login With Facebook</h1></a>
+          <a href="" class="blue"
+            ><h1 style="font-weight: 500; display: inline">
+              Login With Facebook
+            </h1></a
+          >
         </h1>
+        <p style="margin-top: 10px">
+          Discover tasty meat-free meals and dine instantly — no coupon payment,
+          booking or printing is required.
+        </p>
+        <p style="margin-top: 10px">
+          KindMeal is a fun, exciting and cool new way for you to show your
+          compassion towards animals. We collaborate with kind restaurants and
+          cafes across the nation to bring you delicious meat-free foods that
+          will not only help save precious animal lives, but improve your health
+          and save your money at the same time!
+        </p>
+        <td>
+          <div
+            id="ww_join_form_msg"
+            class="ww_error_text"
+            style="font-weight: bold"
+          ></div>
+          <br />
+
+          <table border="0" cellpadding="5" cellspacing="20" width="600">
+            <tbody>
+              <tr>
+                <td width="100" class="ww_text_column label-gray">Your Name</td>
+                <td>
+                  <table cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td width="50%" style="padding-right: 15px">
+                          <div class="ww_text_notice small-gray">
+                            First name
+                          </div>
+                          <input
+                            id="ww_join_firstname"
+                            name="ww_join_firstname"
+                            title="First Name"
+                            type="text"
+                            size="20"
+                            value=""
+                            maxlength="145"
+                            class="ww_form_text"
+                            style="width: 100%"
+                            xonblur="wwInitInput('ww_join_form', 'ww_join_firstname', 'First Name');"
+                            xonfocus="wwClearInput('ww_join_form', 'ww_join_firstname', 'First Name', 'text');"
+                          />
+                        </td>
+                        <td width="50%" style="padding-left: 15px">
+                          <div class="ww_text_notice small-gray">Last name</div>
+                          <input
+                            name="ww_join_lastname"
+                            type="text"
+                            value=""
+                            size="20"
+                            maxlength="100"
+                            class="ww_form_text"
+                            title="Last Name"
+                            style="width: 100%"
+                            xonblur="wwInitInput('ww_join_form', 'ww_join_lastname', 'Last Name');"
+                            xonfocus="wwClearInput('ww_join_form', 'ww_join_lastname', 'Last Name', 'text');"
+                          />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="ww_text_column label-gray">Email</td>
+                <td>
+                  <div class="ww_text_notice small-gray">
+                    Your email must be correct to receive activation email
+                  </div>
+                  <input
+                    id="ww_join_email"
+                    name="ww_join_email"
+                    type="text"
+                    size="30"
+                    value=""
+                    title="Your Email"
+                    maxlength="100"
+                    class="ww_form_text"
+                    style="width: 100%"
+                    xonblur="wwInitInput('ww_join_form', 'ww_join_email', 'Your Email');"
+                    xonfocus="wwClearInput('ww_join_form', 'ww_join_email', 'Your Email', 'text');"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td class="ww_text_column label-gray">Re-Enter Email:</td>
+                <td>
+                  <input
+                    id="ww_join_email2"
+                    name="ww_join_email2"
+                    value=""
+                    type="text"
+                    title="Re-Enter Email"
+                    size="30"
+                    maxlength="100"
+                    class="ww_form_text"
+                    style="width: 100%"
+                    xonblur="wwInitInput('ww_join_form', 'ww_join_email2', 'Re-enter Email');"
+                    xonfocus="wwClearInput('ww_join_form', 'ww_join_email2', 'Re-enter Email', 'text');"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td class="ww_text_column label-gray">Password</td>
+                <td>
+                  <input
+                    id="ww_join_password"
+                    name="ww_join_password"
+                    value=""
+                    title="Your Password"
+                    type="password"
+                    size="30"
+                    maxlength="100"
+                    class="ww_form_text"
+                    style="width: 100%"
+                    xonblur="wwInitInput('ww_join_form', 'ww_join_password', 'Your Password');"
+                    xonfocus="wwClearInput('ww_join_form', 'ww_join_password', 'Your Password', 'password');"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td class="ww_text_column label-gray">Username</td>
+                <td>
+                  <div class="ww_text_notice small-gray">
+                    <div id="username_result">
+                      Choose a cool username for your Personal Profile page,
+                      comments &amp; reviews
+                    </div>
+                  </div>
+                  <b
+                    id="result_valid"
+                    style="display: none; font-size: 14px; color: #19ab3f"
+                    ><font style="font-size: 18px; color: #19ab3f">✓</font>
+                    Username is available</b
+                  >
+                  <div
+                    id="username_sample"
+                    style="
+                      width: 350px;
+                      font-size: 16px;
+                      color: #2184ff;
+                      word-wrap: break-word;
+                    "
+                  >
+                    http://KindMeal.my/<b id="check_user">Username</b>
+                  </div>
+                  <input
+                    name="ww_join_username"
+                    value=""
+                    title="Your Username"
+                    type="text"
+                    size="30"
+                    maxlength="50"
+                    class="ww_form_text"
+                    style="width: 100%"
+                    onkeyup="checkUserPath();"
+                    xonblur="checkUserPath();"
+                    xonfocus="wwClearInput('ww_join_form', 'ww_join_username', 'Your Username', 'text');"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td class="ww_text_column label-gray">Birth Date</td>
+                <td style="height: 45px; vertical-align: middle">
+                  <div class="ww_text_notice small-gray">
+                    Only your age will be publicly visible
+                  </div>
+                  <select
+                    class="ww_form_text"
+                    name="ww_join_dobm"
+                    style="width: 100px"
+                    title="Month of Birth"
+                    xonfocus="highlightText('notice_3');"
+                    xonblur="unhighlightText('notice_3');"
+                  >
+                    <option value="" selected="">Month</option>
+                    <option value="1">Jan</option>
+                    <option value="2">Feb</option>
+                    <option value="3">Mar</option>
+                    <option value="4">Apr</option>
+                    <option value="5">May</option>
+                    <option value="6">Jun</option>
+                    <option value="7">Jul</option>
+                    <option value="8">Aug</option>
+                    <option value="9">Sep</option>
+                    <option value="10">Oct</option>
+                    <option value="11">Nov</option>
+                    <option value="12">Dec</option>
+                  </select>
+
+                  <select
+                    class="ww_form_text"
+                    name="ww_join_dobd"
+                    style="width: 92px"
+                    title="Day of Birth"
+                    xonfocus="highlightText('notice_3');"
+                    xonblur="unhighlightText('notice_3');"
+                  >
+                    <option value="" selected="">Day</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                  </select>
+
+                  <select
+                    class="ww_form_text"
+                    name="ww_join_doby"
+                    style="width: 100px"
+                    title="Year of Birth"
+                    xonfocus="highlightText('notice_3');"
+                    xonblur="unhighlightText('notice_3');"
+                  >
+                    <option value="">Year</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2009">2009</option>
+                    <option value="2008">2008</option>
+                    <option value="2007">2007</option>
+                    <option value="2006">2006</option>
+                    <option value="2005">2005</option>
+                    <option value="2004">2004</option>
+                    <option value="2003">2003</option>
+                    <option value="2002">2002</option>
+                    <option value="2001">2001</option>
+                    <option value="2000">2000</option>
+                    <option value="1999">1999</option>
+                    <option value="1998">1998</option>
+                    <option value="1997">1997</option>
+                    <option value="1996">1996</option>
+                    <option value="1995">1995</option>
+                    <option value="1994">1994</option>
+                    <option value="1993">1993</option>
+                    <option value="1992">1992</option>
+                    <option value="1991">1991</option>
+                    <option value="1990">1990</option>
+                    <option value="1989">1989</option>
+                    <option value="1988">1988</option>
+                    <option value="1987">1987</option>
+                    <option value="1986">1986</option>
+                    <option value="1985">1985</option>
+                    <option value="1984">1984</option>
+                    <option value="1983">1983</option>
+                    <option value="1982">1982</option>
+                    <option value="1981">1981</option>
+                    <option value="1980">1980</option>
+                    <option value="1979">1979</option>
+                    <option value="1978">1978</option>
+                    <option value="1977">1977</option>
+                    <option value="1976">1976</option>
+                    <option value="1975">1975</option>
+                    <option value="1974">1974</option>
+                    <option value="1973">1973</option>
+                    <option value="1972">1972</option>
+                    <option value="1971">1971</option>
+                    <option value="1970">1970</option>
+                    <option value="1969">1969</option>
+                    <option value="1968">1968</option>
+                    <option value="1967">1967</option>
+                    <option value="1966">1966</option>
+                    <option value="1965">1965</option>
+                    <option value="1964">1964</option>
+                    <option value="1963">1963</option>
+                    <option value="1962">1962</option>
+                    <option value="1961">1961</option>
+                    <option value="1960">1960</option>
+                    <option value="1959">1959</option>
+                    <option value="1958">1958</option>
+                    <option value="1957">1957</option>
+                    <option value="1956">1956</option>
+                    <option value="1955">1955</option>
+                    <option value="1954">1954</option>
+                    <option value="1953">1953</option>
+                    <option value="1952">1952</option>
+                    <option value="1951">1951</option>
+                    <option value="1950">1950</option>
+                    <option value="1949">1949</option>
+                    <option value="1948">1948</option>
+                    <option value="1947">1947</option>
+                    <option value="1946">1946</option>
+                    <option value="1945">1945</option>
+                    <option value="1944">1944</option>
+                    <option value="1943">1943</option>
+                    <option value="1942">1942</option>
+                    <option value="1941">1941</option>
+                    <option value="1940">1940</option>
+                    <option value="1939">1939</option>
+                    <option value="1938">1938</option>
+                    <option value="1937">1937</option>
+                    <option value="1936">1936</option>
+                    <option value="1935">1935</option>
+                    <option value="1934">1934</option>
+                    <option value="1933">1933</option>
+                    <option value="1932">1932</option>
+                    <option value="1931">1931</option>
+                    <option value="1930">1930</option>
+                    <option value="1929">1929</option>
+                    <option value="1928">1928</option>
+                    <option value="1927">1927</option>
+                    <option value="1926">1926</option>
+                    <option value="1925">1925</option>
+                    <option value="1924">1924</option>
+                    <option value="1923">1923</option>
+                  </select>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="ww_text_column label-gray">Country</td>
+                <td>
+                  <select
+                    class="ww_form_text"
+                    name="ww_join_country"
+                    title="Your Country"
+                  >
+                    <option value="" selected="">Your Country</option>
+                    <option value="130">Malaysia</option>
+                    <option value="2">Afghanistan</option>
+                    <option value="3">Albania</option>
+                    <option value="4">Algeria</option>
+                    <option value="5">American Samoa</option>
+                    <option value="6">Andorra</option>
+                    <option value="7">Angola</option>
+                    <option value="8">Anguilla</option>
+                    <option value="9">Antarctica</option>
+                    <option value="10">Antigua and Barbuda</option>
+                    <option value="11">Argentina</option>
+                    <option value="12">Armenia</option>
+                    <option value="13">Aruba</option>
+                    <option value="15">Australia</option>
+                    <option value="14">Austria</option>
+                    <option value="16">Azerbaijan</option>
+                    <option value="17">Bahamas</option>
+                    <option value="18">Bahrain</option>
+                    <option value="19">Bangladesh</option>
+                    <option value="20">Barbados</option>
+                    <option value="21">Belarus</option>
+                    <option value="22">Belgium</option>
+                    <option value="23">Belize</option>
+                    <option value="24">Benin</option>
+                    <option value="25">Bermuda</option>
+                    <option value="26">Bhutan</option>
+                    <option value="27">Bolivia</option>
+                    <option value="28">Bosnia and Herzegovina</option>
+                    <option value="29">Botswana</option>
+                    <option value="30">Bouvet Island</option>
+                    <option value="31">Brazil</option>
+                    <option value="32">British Indian Ocean Territory</option>
+                    <option value="33">Brunei Darussalam</option>
+                    <option value="34">Bulgaria</option>
+                    <option value="35">Burkina Faso</option>
+                    <option value="36">Burundi</option>
+                    <option value="37">Cambodia</option>
+                    <option value="38">Cameroon</option>
+                    <option value="39">Canada</option>
+                    <option value="40">Cape Verde</option>
+                    <option value="41">Cayman Islands</option>
+                    <option value="42">Central African Republic</option>
+                    <option value="43">Chad</option>
+                    <option value="44">Chile</option>
+                    <option value="45">China</option>
+                    <option value="46">Christmas Island</option>
+                    <option value="47">Cocos (Keeling) Islands</option>
+                    <option value="48">Colombia</option>
+                    <option value="49">Comoros</option>
+                    <option value="50">Congo</option>
+                    <option value="51">Cook Islands</option>
+                    <option value="52">Costa Rica</option>
+                    <option value="53">Cote D'Ivoire</option>
+                    <option value="54">Croatia (Hrvatska)</option>
+                    <option value="55">Cuba</option>
+                    <option value="56">Cyprus</option>
+                    <option value="57">Czech Republic</option>
+                    <option value="58">Czechoslovakia (former)</option>
+                    <option value="59">Denmark</option>
+                    <option value="60">Djibouti</option>
+                    <option value="61">Dominica</option>
+                    <option value="62">Dominican Republic</option>
+                    <option value="63">East Timor</option>
+                    <option value="64">Ecuador</option>
+                    <option value="65">Egypt</option>
+                    <option value="66">El Salvador</option>
+                    <option value="67">Equatorial Guinea</option>
+                    <option value="68">Eritrea</option>
+                    <option value="69">Estonia</option>
+                    <option value="70">Ethiopia</option>
+                    <option value="71">Falkland Islands</option>
+                    <option value="72">Faroe Islands</option>
+                    <option value="73">Fiji</option>
+                    <option value="74">Finland</option>
+                    <option value="75">France</option>
+                    <option value="76">French Guiana</option>
+                    <option value="77">French Polynesia</option>
+                    <option value="78">FT</option>
+                    <option value="79">Gabon</option>
+                    <option value="80">Gambia</option>
+                    <option value="81">Georgia</option>
+                    <option value="82">Germany</option>
+                    <option value="83">Ghana</option>
+                    <option value="84">Gibraltar</option>
+                    <option value="85">Greece</option>
+                    <option value="86">Greenland</option>
+                    <option value="87">Grenada</option>
+                    <option value="88">Guadeloupe</option>
+                    <option value="89">Guam</option>
+                    <option value="90">Guatemala</option>
+                    <option value="91">Guinea</option>
+                    <option value="92">Guinea-Bissau</option>
+                    <option value="93">Guyana</option>
+                    <option value="94">Haiti</option>
+                    <option value="95">Heard and McDonald Island</option>
+                    <option value="96">Honduras</option>
+                    <option value="97">Hong Kong</option>
+                    <option value="98">Hungary</option>
+                    <option value="99">Iceland</option>
+                    <option value="100">India</option>
+                    <option value="101">Indonesia</option>
+                    <option value="102">Iran</option>
+                    <option value="103">Iraq</option>
+                    <option value="104">Ireland</option>
+                    <option value="105">Israel</option>
+                    <option value="106">Italy</option>
+                    <option value="107">Jamaica</option>
+                    <option value="108">Japan</option>
+                    <option value="109">Jordan</option>
+                    <option value="110">Kazakhstan</option>
+                    <option value="111">Kenya</option>
+                    <option value="112">Kiribati</option>
+                    <option value="114">Korea (South)</option>
+                    <option value="113">Korea(North)</option>
+                    <option value="115">Kuwait</option>
+                    <option value="116">Kyrgyzstan</option>
+                    <option value="117">Laos</option>
+                    <option value="118">Latvia</option>
+                    <option value="119">Lebanon</option>
+                    <option value="120">Lesotho</option>
+                    <option value="121">Liberia</option>
+                    <option value="122">Libya</option>
+                    <option value="123">Liechtenstein</option>
+                    <option value="124">Lithuania</option>
+                    <option value="125">Luxembourg</option>
+                    <option value="126">Macau</option>
+                    <option value="127">Macedonia</option>
+                    <option value="128">Madagascar</option>
+                    <option value="129">Malawi</option>
+                    <option value="130">Malaysia</option>
+                    <option value="131">Maldives</option>
+                    <option value="132">Mali</option>
+                    <option value="133">Malta</option>
+                    <option value="134">Marshall Islands</option>
+                    <option value="135">Martinique</option>
+                    <option value="136">Mauritania</option>
+                    <option value="137">Mauritius</option>
+                    <option value="138">Mayotte</option>
+                    <option value="139">Mexico</option>
+                    <option value="140">Micronesia</option>
+                    <option value="141">Moldova</option>
+                    <option value="142">Monaco</option>
+                    <option value="143">Mongolia</option>
+                    <option value="144">Montserrat</option>
+                    <option value="145">Morocco</option>
+                    <option value="146">Mozambique</option>
+                    <option value="147">Myanmar</option>
+                    <option value="148">Namibia</option>
+                    <option value="149">Nauru</option>
+                    <option value="150">Nepal</option>
+                    <option value="151">Netherlands</option>
+                    <option value="152">Netherlands Antilles</option>
+                    <option value="153">Neutral Zone</option>
+                    <option value="154">New Caledonia</option>
+                    <option value="155">New Zealand</option>
+                    <option value="156">Nicaragua</option>
+                    <option value="157">Niger</option>
+                    <option value="158">Nigeria</option>
+                    <option value="159">Niue</option>
+                    <option value="160">Norfolk Island</option>
+                    <option value="161">Northern Mariana Islands</option>
+                    <option value="162">Norway</option>
+                    <option value="163">Oman</option>
+                    <option value="164">Pakistan</option>
+                    <option value="165">Palau</option>
+                    <option value="166">Panama</option>
+                    <option value="167">Papua New Guinea</option>
+                    <option value="168">Paraguay</option>
+                    <option value="169">Peru</option>
+                    <option value="170">Philippines</option>
+                    <option value="171">Pitcairn</option>
+                    <option value="172">Poland</option>
+                    <option value="173">Portugal</option>
+                    <option value="174">Puerto Rico</option>
+                    <option value="175">Qatar</option>
+                    <option value="176">Reunion</option>
+                    <option value="177">Romania</option>
+                    <option value="178">Russian Federation</option>
+                    <option value="179">Rwanda</option>
+                    <option value="180">Saint Kitts and Nevis</option>
+                    <option value="181">Saint Lucia</option>
+                    <option value="182">
+                      Saint Vincent and the Grenadines
+                    </option>
+                    <option value="183">Samoa</option>
+                    <option value="184">San Marino</option>
+                    <option value="185">Sao Tome and Principe</option>
+                    <option value="186">Saudi Arabia</option>
+                    <option value="187">Senegal</option>
+                    <option value="188">Seychelles</option>
+                    <option value="189">Sierra Leone</option>
+                    <option value="190">Singapore</option>
+                    <option value="194">Slovak Republic</option>
+                    <option value="195">Slovenia</option>
+                    <option value="191">Solomon Islands</option>
+                    <option value="192">Somalia</option>
+                    <option value="193">South Africa</option>
+                    <option value="196">Spain</option>
+                    <option value="197">Sri Lanka</option>
+                    <option value="198">St. Helena</option>
+                    <option value="199">St. Pierre and Miquelon</option>
+                    <option value="200">Sudan</option>
+                    <option value="201">Suriname</option>
+                    <option value="202">Svalbard and Jan Mayen Islands</option>
+                    <option value="203">Swaziland</option>
+                    <option value="204">Sweden</option>
+                    <option value="205">Switzerland</option>
+                    <option value="206">Syria</option>
+                    <option value="207">Taiwan</option>
+                    <option value="208">Tajikistan</option>
+                    <option value="209">Tanzania</option>
+                    <option value="210">Thailand</option>
+                    <option value="211">Togo</option>
+                    <option value="213">Tokelau</option>
+                    <option value="214">Tonga</option>
+                    <option value="212">Trinidad and Tobago</option>
+                    <option value="215">Tunisia</option>
+                    <option value="216">Turkey</option>
+                    <option value="217">Turkmenistan</option>
+                    <option value="218">Turks and Caicos Islands</option>
+                    <option value="219">Tuvalu</option>
+                    <option value="220">Uganda</option>
+                    <option value="221">Ukraine</option>
+                    <option value="222">United Arab Emirate</option>
+                    <option value="223">United Kingdom</option>
+                    <option value="224">United States</option>
+                    <option value="225">Uruguay</option>
+                    <option value="226">US Minor Outlying Islands</option>
+                    <option value="227">USSR (former)</option>
+                    <option value="228">Uzbekistan</option>
+                    <option value="230">Vanuatu</option>
+                    <option value="229">Vatican City State (Holy See)</option>
+                    <option value="231">Venezuela</option>
+                    <option value="232">Vietnam</option>
+                    <option value="233">Virgin Islands (British)</option>
+                    <option value="234">Virgin Islands (U.S.)</option>
+                    <option value="235">Wallis and Futuna Islands</option>
+                    <option value="236">Western Sahara</option>
+                    <option value="237">Yemen</option>
+                    <option value="238">Yugoslavia</option>
+                    <option value="239">Zaire</option>
+                    <option value="240">Zambia</option>
+                    <option value="241">Zimbabwe</option>
+                  </select>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="ww_text_column label-gray">State</td>
+                <td style="height: 45px">
+                  <select
+                    class="ww_form_text"
+                    name="ww_join_state"
+                    title="Your State"
+                  >
+                    <option value="">Select State</option>
+                    <option value="41336">Johor</option>
+                    <option value="41325">Kedah</option>
+                    <option value="41367">Kelantan</option>
+                    <option value="41401">Kuala Lumpur</option>
+                    <option value="41415">Labuan</option>
+                    <option value="41324">Melaka</option>
+                    <option value="41332">Negeri Sembilan</option>
+                    <option value="41335">Pahang</option>
+                    <option value="41330">Perak</option>
+                    <option value="41380">Perlis</option>
+                    <option value="41327">Pulau Pinang</option>
+                    <option value="41345">Sabah</option>
+                    <option value="41342">Sarawak</option>
+                    <option value="41326">Selangor</option>
+                    <option value="41361">Terengganu</option>
+                  </select>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="ww_text_column label-gray">Gender</td>
+                <td class="ww_form_content" xstyle="border: 0px;">
+                  <input name="ww_join_gender" type="radio" value="M" /> Male
+                  &nbsp;&nbsp;
+                  <input name="ww_join_gender" type="radio" value="F" /> Female
+                </td>
+              </tr>
+
+              <tr>
+                <td
+                  valign="top"
+                  style="padding-top: 10px"
+                  class="ww_text_column label-gray"
+                >
+                  Profile Photo:
+                </td>
+                <td>
+                  <!--
+          <div class="button_upload_layer" xstyle="display: none; margin-bottom: 8px;" class="upload_preview_90" id="mphoto_previewlayer">Preview</div>
+          <input id="mphoto" name="mphoto" value="" type=file size="30" maxlength="50" xclass="ww_form_text" xstyle="font-size: 15px; width: 95px; color: #ffffff;" class="button_upload">
+          <div class="button_upload_text">Select Photo</div></div><div style="height: 20px;"></div>
+          -->
+
+                  <table
+                    border="0"
+                    width="100%"
+                    cellpadding="0"
+                    cellspacing="0"
+                  >
+                    <tbody>
+                      <tr>
+                        <td width="110">
+                          <div
+                            style="display: none; margin-bottom: 8px"
+                            class="upload_preview_90"
+                            id="mphoto_previewlayer"
+                          >
+                            Preview
+                          </div>
+                          <div
+                            class="button_upload_layer"
+                            style="position: absolute"
+                          >
+                            <input
+                              type="hidden"
+                              id="mphoto_status"
+                              name="shopphoto1_status"
+                              value="0"
+                            />
+                            <input
+                              style="border: none"
+                              id="mphoto"
+                              name="mphoto"
+                              value=""
+                              type="file"
+                              size="30"
+                              maxlength="50"
+                              class="button_upload"
+                            />
+                          </div>
+                          <div style="height: 20px"></div>
+                        </td>
+                        <td valign="top">
+                          <div id="mphoto_caption" style="display: none">
+                            <div
+                              class="button_upload_cancel"
+                              title="Remove Photo"
+                              onclick="handleFileClear('mphoto');"
+                            >
+                              ✕
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td
+                  class="ww_form_text"
+                  style="
+                    border: 0px;
+                    background-color: transparent;
+                    font-size: 16px;
+                    font-weight: normal;
+                    line-height: 20px;
+                    color: #666666;
+                    padding: 3px 10px 3px 10px;
+                    height: 30px;
+                    width: 300px;
+                    border-radius: 5px;
+                    outline: none;
+                    background-color: #ffffff;
+                  "
+                  colspan="3"
+                >
+                  <br />
+                  <input type="checkbox" name="ww_join_agree" value="1" /> I
+                  agree to KindMeal.my's
+                  <a
+                    style="color: #666666; font-size: 16px"
+                    href="https://www.kindmeal.my/terms.htm"
+                    target="_blank"
+                    >Terms &amp; Conditions</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td align="left" colspan="3">
+                  <br /><br />
+                  <div
+                    id="ww_join_form_button"
+                    class="button_red"
+                    onclick="signUp();"
+                  >
+                    Join Now
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
       </div>
     </div>
-    <!-- <div id="footer"></div> -->
+    <div
+      class="above-footer"
+      style="
+        background-color: #e0e0e0;
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+      "
+    >
+      <img src="https://www.kindmeal.my/images/how_kindmeal_works.png" alt="" />
+    </div>
+    <div id="footer"></div>
   </body>
 </html>
 <script type="module">

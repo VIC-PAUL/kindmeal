@@ -27,7 +27,9 @@
       <p style="font-size: 14px; margin-top: 10px; margin-bottom: 40px">
         Please select the type of membership to proceed
       </p>
-      <div class="foodLover modalChild">
+      <div onclick="(function dis(){
+        window.location.href = 'join.html'
+      })()" class="foodLover modalChild">
         <img
           class="img_1"
           src="https://www.kindmeal.my/images/join_normal.png"
@@ -68,7 +70,7 @@
       <div class="loginInput">
         <input type="email" id="login_email" placeholder="Your Email" />
         <input type="password" id="login_password" placeholder="Your Password" />
-        <button id="sumbit_login">Login</button>
+        <button onclick="do_login()" id="sumbit_login">Login</button>
       </div>
       <hr />
       <div class="loginWithFb">
@@ -321,3 +323,4 @@
 </script>
 <script src="./scripts/index.js"></script>
 <script src="./scripts/modal.js"></script>
+<script src="./scripts/login.js"></script>

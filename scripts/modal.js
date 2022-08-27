@@ -19,10 +19,11 @@ function signupModalFunctionalities() {
       window.scrollTo(0, 0);
     };
   }
-
-  setTimeout(() => {
-    document.querySelector("#signup").addEventListener("click", openModal);
-  }, 100);
+  try {
+    setTimeout(() => {
+      document.querySelector("#signup").addEventListener("click", openModal);
+    }, 100);
+  } catch (err) {}
 }
 
 function loginModalFunctionalities() {
