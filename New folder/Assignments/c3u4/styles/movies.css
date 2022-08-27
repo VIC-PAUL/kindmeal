@@ -1,0 +1,52 @@
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: aliceblue;
+    padding: 0px 50px 0px 50px;
+  }
+  #movies{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 30px;
+    margin-top: 50px;
+    width: 90%;
+  }
+  .movie_tab{
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+  }
+  .book_now{
+    width: 100%;
+    font-size: 20px;
+    padding: 5px;
+    margin-bottom: -10px;
+    background-color: blue;
+    border: 1px solid grey;
+    color: aliceblue;
+    cursor: pointer;
+  }
+  #search_bar{
+    margin: auto;
+    margin-top: 5%;
+    border: 1px solid black;
+    width: 500px;
+    border-radius: 5px;
+    background-color: rgb(232, 240, 254);
+  }
+  #search_bar>input{
+    font-size: 25px;
+    width: 90%;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 5px;
+    background-color: rgb(232, 240, 254);
+    color: aliceblue;
+  }
+  i{
+    font-size: 25px;
+    color: grey;
+  }

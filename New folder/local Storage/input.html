@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    
+<H1>Price</H1>
+   <style>
+
+   </style>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Total Wallet:-  <span id="price"></span></p>
+       
+    </div>
+    <div>  <input type="number" placeholder="Cost" id="cost">
+        <button id="likebtn">
+            Add to Wallet
+        </button>
+      
+       
+    </div>
+</body>
+<script> 
+let money;
+if (localStorage.getItem("price")==null){
+    money=0;
+}else {
+    money= localStorage.getItem("price")
+}
+
+
+document.getElementById("price").innerText=money;
+
+
+
+document.getElementById("likebtn").addEventListener("click",likefnc)
+function likefnc(){
+    money++
+    localStorage.setItem("price",money)
+    console.log("Added")
+
+    document.getElementById("price").innerText=money;
+
+};
+
+
+</script>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <link rel="stylesheet" href="./styles/navbar.css">
+ <link rel="stylesheet" href="./styles/KindMoment.css">
+</head>
+<body> <div id="navbar"></div>
+
+    <div id="body_div">
+        <div id="top"><div>
+                <div id="top_append">
+                       <div id="fst">KindMoments</div>
+                       <div id="snd">|   Saving Lives with Yummy Photos</div> 
+                </div>
+                <td id="top_down" >
+                        Discover new, delicious meat-free cuisines enjoyed by other compassionate food lovers. Share your interesting KindMoments, and build your own fans and followers to encourage kind, healthy meals.<br><br>
+                        Download our <a href="https://www.kindmeal.my/mobile.htm" style="color:blue" >mobile app</a> to easily showcase your masterpieces and interact with food lovers.<br><br>
+                        Get started sharing your tasty moments now.
+                </td></div>
+                <div class="box" style=" padding:10px; border-radius:10px; box-shadow: 0px 0px 6px #e0e0e0; text-align: center; background-color: #ffffff;">
+                    <center>
+                    <div style="font-size:20px; line-height: 24px; margin-bottom:5px; color: #444444;">Share Your KindMoment</div>
+                    Interesting food or restaurant? Share with 1000s of food lovers!<br>
+                    <div class="button_red" style="margin-top: 10px;" onclick="showPopupMoment();">Share</div>
+                    </center>
+                    </div>
+        </div>
+        
+
+        <div id="filter">
+    <div>
+         <button id="A" onclick="changegreen">Moments</button>
+         <button onclick="changegreen">Deal Reviews</button>
+         <button onclick="changegreen">Following</button></div>
+    <div>       
+<input type="text" id="filter_search" style="width: 200px;" value="" placeholder="Search User or Shop">
+<select id="filter_option" style="height: 39px; width: 180px;">
+<option value="0">All Locations</option>
+<option value="">Klang Valley</option>
+<option value="60"> Kuala Lumpur</option>
+<option value="42"> Petaling Jaya</option>
+<option value="20"> Ampang</option>
+<option value="22"> Bangsar</option>
+<option value="23"> Bangsar South</option>
+<option value="24"> Bukit Bintang</option>
+<option value="26"> Bukit Damansara</option>
+<option value="27"> Cheras</option>
+<option value="29"> Damansara Heights</option>
+<option value="31"> Damansara Utama</option>
+<option value="62"> Ipoh</option>
+<option value="34"> Kepong</option>
+<option value="35"> Klang</option>
+<option value="37"> Kota Damansara</option>
+<option value="39"> Mont Kiara</option>
+<option value="41"> Old Klang Road</option>
+<option value="44"> Puchong</option>
+<option value="50"> Seri Kembangan</option>
+<option value="52"> Shah Alam</option>
+<option value="54"> Sri Petaling</option>
+<option value="55"> Subang</option>
+<option value="56"> Taman Desa</option>
+<option value="58"> Taman Tun</option>
+</select>
+<button class="sear">Search</button>
+</div> 
+</div>
+
+<div id="pagination">
+    <div id="page"> Page : <div> 
+        <a style="color:blue;" href="">1</a>
+        <a style="color:blue;" href="">2</a>
+        <a style="color:blue;" href="">3</a>
+        <a style="color:blue;" href="">4</a>
+        <a style="color:blue;" href="">5</a>
+        <a style="color:blue;" href="">6</a>
+        <a style="color:blue;" href="">7</a>
+        <a style="color:blue;" href="">8</a>
+        <a style="color:blue;" href="">9</a>
+        <a style="color:blue;" href="">10</a>
+    </div> 
+
+    </div>
+    <div>
+        <button id="B">Next »</button>
+
+    </div>
+</div>
+
+<div id="main_con">
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+<div id="footer"></div>
+</body>
+</html>
+
+<script type="module">
+    
+
+    let navbar = document.getElementById("navbar")
+    
+    import DishplayNavbar from "./components/navbar.js"
+    navbar.innerHTML = DishplayNavbar()
+
+    let footer = document.getElementById("footer")
+    import dishplayFooter from "./components/footer.js"
+    footer.innerHTML = dishplayFooter()
+</script>
+<script src="./scripts/KindMoment.js"></script>

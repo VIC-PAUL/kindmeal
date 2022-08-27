@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+ body{
+    background-color: rgb(248, 247, 247);
+ }
+form{
+    width: 40%;
+    background-color: white;
+    margin: 20px auto;
+    padding: 2%;
+}
+input{
+    display: block;
+    font-size:25px;
+    width: 80%;
+    margin: auto;
+    padding: 1% 10px;
+    margin-top: 10px;
+}
+p{
+    text-align: center;
+    margin-top: 20px;
+}
+span{
+    color: skyblue;
+    text-decoration: underline;
+    cursor: pointer;
+}

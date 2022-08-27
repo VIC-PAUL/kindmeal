@@ -1,0 +1,42 @@
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: aliceblue;
+    padding: 0px 50px 0px 50px;
+  }
+  #add-money{
+    margin-top: 5%;
+    
+    text-align: center;
+  }
+  #amount{
+    width: 400px;
+    padding: 5px;
+    font-size: 25px;
+    border-radius: 10px;
+  }
+  #book_movies{
+    margin-top: 10px;
+    width: 200px;
+    font-size: 20px;
+    padding: 5px;
+    margin-bottom: -10px;
+    background-color: blue;
+    border: 1px solid grey;
+    color: aliceblue;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  #add_to_wallet{
+margin-top: 10px;
+width: 200px;
+font-size: 20px;
+padding: 5px;
+margin-bottom: -10px;
+background-color: green;
+border: 1px solid grey;
+color: aliceblue;
+cursor: pointer;
+border-radius: 10px;
+  }
