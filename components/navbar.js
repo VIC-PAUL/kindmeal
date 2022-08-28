@@ -25,9 +25,9 @@ function DishplayNavbar() {
 <div id="nav-2">
     <div>
         <a href="index.html">Home</a>
-        <a href="#">Meal Deals</a>
+        <a href="MealDeals.html">Meal Deals</a>
         <a href="#">KindMoments</a>
-        <a href="#">Hot Picks</a>
+        <a href="HotPicks.html">Hot Picks</a>
         <a href="directory.html">Directory</a>
         <a href="#">Articles</a>
         <a href="help.html">Help</a>
