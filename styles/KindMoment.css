@@ -100,9 +100,9 @@ border-radius: 6px;}
     margin-bottom: 20px;
 
 }
-#top_down{
+/* #top_down{
     margin-top: 50px;
-}
+} */
 #filter>div{
     display: flex;
     gap: 20px;
@@ -164,8 +164,24 @@ margin-bottom: 20px;
     border: none;
     
 }
+#top_append{
+    margin-left: 18%;
+}
+.top_down{
+    margin-left: 20%;
+    margin-top: 20px;
+    margin-bottom: 5%;
+
+}
+.box{
+    margin-right: 14%;
+    margin-top: +2%;
+    margin-bottom: +5%;
+   
+}
 #top{
     display: flex;
+    background-color: #f0f0f0;
 }
 #main_con{
  margin-top: 20px;

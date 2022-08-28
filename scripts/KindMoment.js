@@ -1,16 +1,16 @@
 moment_data=[{
-    thumb:"	https://www.kindmeal.my/photos/member/22/22429-s.jpg",
-    name:"WeeChian",
+    thumb:"https://www.kindmeal.my/photos/member/23/23028-m.jpg",
+    name:"YinYinBoey ",
     date:"Aug 26th 2022",
     logo_love:"https://www.kindmeal.my/images/icon_heart_darkgrey.svg",
     love_count:"0",
     logo_cam:"https://www.kindmeal.my/images/icon_camera_darkgrey.png",
-    cam_count:"4",
+    cam_count:"0",
     logo_sms:"https://www.kindmeal.my/images/icon_comment_darkgrey.png",
     sms_count:"0",
     desc:"Throwback variety of nice vegetarian/vegan foodies during my..",
     desc_more:"see more",
-    img:"https://www.kindmeal.my/photos/moment/24/24331-46751-m.jpg",
+    img:"https://www.kindmeal.my/photos/moment/24/24329-46743-m.jpg",
     bottom_logo:"https://www.kindmeal.my/images/icon_facebook_moment.png",
     logo_title:"The Hungry Tapir",
     logo_disc:""
@@ -284,9 +284,16 @@ function display(data=[]){
   name.textContent=element.name;
   const date=document.createElement("p");
   date.textContent=element.date;
-  const button=document.createElement("button")
-  button.innerText=view;
-  button.id=("buttonid");
+
+  
+
+const button=document.createElement("button");
+button.id=("buttonid")
+button.innerText=view;
+button.addEventListener("click",function(button_your){
+window.location.href="./Kind2.html"
+
+})
   
   const img=document.createElement("img");
   img.src=element.img;
