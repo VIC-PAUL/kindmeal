@@ -28,7 +28,7 @@ function signUp() {
     let email = document.querySelector("#ww_join_email").value;
     let password = document.querySelector("#ww_join_password").value;
     let name = document.querySelector('#ww_join_firstname').value;
-    if(!name) name = 'Test';
+    if (!name) name = 'Test';
     let obj = {
       email,
       password,

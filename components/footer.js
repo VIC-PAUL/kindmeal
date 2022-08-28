@@ -3,10 +3,10 @@ function dishplayFooter() {
     <div>
         <div class="fot-head">General</div>
         <a href="#">Home</a>
-        <a href="#">Sign Up</a>
+        <a href="join.html">Sign Up</a>
         <a href="#">Businesses / Restaurateurs</a>
         <a href="#">Advertising</a>
-        <a href="#">About KindMeal.my</a>
+        <a href="AboutKindMeal.html">About KindMeal.my</a>
         <a href="help.html">Help & FAQ</a>
         <a href="#">Terms & Conditions</a>
         <a href="#">Inspiring Partners</a>
@@ -16,16 +16,16 @@ function dishplayFooter() {
     </div>
     <div>
         <div class="fot-head">Features</div>
-        <a href="#">Meat-Free Deals</a>
-        <a href="#">Tasty Menus</a>
-        <a href="#">Kind Moments</a>
+        <a href="MealDeals.html">Meat-Free Deals</a>
+        <a href="Food Menu.html">Tasty Menus</a>
+        <a href="KindMoment.html">Kind Moments</a>
         <a href="#">Meat-Free Recipes</a>
-        <a href="#">Member Recommendations</a>
-        <a href="#">Featured Restaurants</a>
-        <a href="#">Vegetarian & Vegan Directory</a>
-        <a href="#">Food Map</a>
+        <a href="HotPicks.html">Member Recommendations</a>
+        <a href="Featured Restaurants.html">Featured Restaurants</a>
+        <a href="directory.html">Vegetarian & Vegan Directory</a>
+        <a href="Food Map.html">Food Map</a>
         <a href="#">Become A Superhero</a>
-        <a href="#">Vegan News & Vegetarian Articles</a>
+        <a href="articles.html">Vegan News & Vegetarian Articles</a>
         <a href="#">Latest Comments</a>
     </div>
     <div>
