@@ -16,15 +16,18 @@
             align-items: center;
             height: 35px;
         }
-        #topheading>h6{
-            font-size: xx-large;
-            color:rgb(80, 78, 78)
+
+        #topheading>h2 {
+            font-weight: 400;
+            font-size: 30px;
+            color: rgb(80, 78, 78)
         }
-        #topheading>p{
+
+        #topheading>p {
             margin-left: 30px;
             border-left: 3px solid rgba(81, 81, 79, 0.801);
             padding-left: 30px;
-            font-size: 28px;
+            font-size: 22px;
             color: rgba(81, 81, 79, 0.801);
         }
         input,select,button{
@@ -82,11 +85,11 @@
         }
         #discount{
             position: relative;
-            bottom: 300px;
+            bottom: 305px;
             left : 12px;
             background-color: rgba(219, 218, 213, 0.888);
-            height: 50px;
-            width: 50px;
+            height: 60px;
+            width: 60px;
             border-radius: 50%;
             font-size: x-large;
             display: flex;
@@ -134,5 +137,8 @@
         }
         #downad>img{
             margin-top: 30px;
+        }
+        select{
+            color :gray
         }
 
