@@ -9,10 +9,11 @@ function do_login() {
         localStorage.setItem("name", item.name);
         alert("Login Successfully");
         document.querySelector(".modalLogin").style.display = "none";
-      } else {
-        alert("Incorrect Details !");
       }
     });
+    setTimeout(() => {
+      window.location.reload();
+    }, 500);
   } else {
     alert("Incorrect Details !");
   }
@@ -21,7 +22,8 @@ console.log(localStorage.getItem("isLogin"));
 setTimeout(() => {
   if (localStorage.getItem("isLogin") == "true") {
     document.querySelector("#nav1-child-3").style.display = "none";
-    document.querySelector(".isLoggedIn #name").innerText = localStorage.getItem("name");
+    document.querySelector(".isLoggedIn #name").innerText =
+      localStorage.getItem("name");
     document.querySelector(".isLoggedIn").style.display = "flex";
   }
 }, 200);
