@@ -14,10 +14,16 @@ padding-bottom: 40px;
     text-decoration: none;
 }
 #Dir_top>h2{
-    font-weight: 500;  
+    margin-top: 20px;
+    font-size: 26px;
+    font-weight: 500;
+    color: #444444;
 }
 #Dir_top1>h2{
-    font-weight: 500; 
+    margin-top: 20px;
+    font-size: 26px;
+    font-weight: 500;
+    color: #444444;
 }
 #Dir_top>h5{
 font-weight: 500;
