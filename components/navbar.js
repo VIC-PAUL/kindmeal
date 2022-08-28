@@ -13,6 +13,9 @@ function DishplayNavbar() {
 
     </div>
 <<<<<<< day4byshivv
+=======
+<<<<<<< day4byshivv
+>>>>>>> main
     <div class="isLoggedIn" style="display:none">
       <img src="https://www.kindmeal.my/images/icon_notice.png" alt="">
 
