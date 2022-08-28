@@ -16,6 +16,9 @@ padding-bottom: 40px;
 #Dir_top>h2{
     font-weight: 500;  
 }
+#Dir_top1>h2{
+    font-weight: 500; 
+}
 #Dir_top>h5{
 font-weight: 500;
 line-height: 5px;
