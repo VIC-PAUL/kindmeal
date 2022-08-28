@@ -1,5 +1,5 @@
 function DishplayNavbar() {
-    return `<div id="nav-1">
+  return `<div id="nav-1">
     <div id="nav1-child-1">
         <img src="https://www.kindmeal.my/images/logo-kindmeal.png" alt="">
     </div>
@@ -12,6 +12,16 @@ function DishplayNavbar() {
                 alt=""></a>
 
     </div>
+<<<<<<< day4byshivv
+    <div class="isLoggedIn" style="display:none">
+      <img src="https://www.kindmeal.my/images/icon_notice.png" alt="">
+
+      <p style="color: rgb(136, 136, 136);display:inline" ><span id="name">Shivendra Babu</span><font style="font-size:12px;color: rgb(136, 136, 136);margin-left: 10px;">▼</font></p>
+      
+      <img style="border: 1px solid rgb(136, 136, 136);" src="https://www.kindmeal.my/images/no_photo_header.png" alt="">
+    </div>
+=======
+>>>>>>> main
     <div id="nav1-child-3">
         <p>Login</p>
         <h4 id="facebook"><a
